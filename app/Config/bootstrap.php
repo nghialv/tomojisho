@@ -179,3 +179,8 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
+
+Configure::write('Facebook.appId', '469902383051095');
+Configure::write('Facebook.appUrl', 'http://apps.facebook.com/tomojisho');
+Configure::write('Facebook.secret', '5e400a7294fd4de577e849ca853bb8c6');
+Configure::write('Facebook.scope', '');
