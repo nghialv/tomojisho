@@ -51,7 +51,6 @@ class GameController extends AppController {
   
   public function display() {
     $data = $this->setDataToDisp(); 
-    var_dump($data);
     $this->set('data', $data);
     $this->render('/Game/index');
   }
