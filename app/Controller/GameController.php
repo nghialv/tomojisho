@@ -63,12 +63,20 @@ class GameController extends AppController {
   }
 
   public function judge() {
+    $this->autoLayout = false; 
+
     $choose = $_POST['choose'];
     $ans = $_POST['ans'];   
-    if $choose % 2 == $ans % 2
-      echo "correct";
-    else
-      echo "false";
+    var_dump($choose);
+    var_dump($ans);
+    if ($choose % 2 == $ans % 2) {
+      $this->set('data', 'true'); 
+      $this->render('/Game/serialize');
+    }
+    else {
+      $this->set('data', 'false'); 
+      $this->render('/Game/serialize');
+    }
   } 
 }
 ?>
