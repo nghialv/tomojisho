@@ -1,10 +1,8 @@
 <?php
-  class Game extends AppModel{
-    public $useTable = false;
+  var $facebook;
+  var $fb_user;
 
-    var $facebook;
-    var $fb_user;
-
+  class FBComponent extends Object {
     function __construct($request=null, $response=null) {
       parent::__construct($request, $response);
       App::import('Vendor', 'facebook/src/facebook');
@@ -15,7 +13,7 @@
       ));
     }
 
-    private function beforeFilter(){
+    function beforeFilterFunc(){
       $this->fb_user = $this->facebook->getUser();
 
       if(empty($this->fb_user)) {
@@ -28,9 +26,9 @@
       }
     }
 
-    public function getFriends()
+    function getFriends()
     {
-      beforeFilter();
+      $this->beforeFilterFunc();
       $fb_friends = $this->facebook->api('/me/friends');
       return $fb_friends;
     }
