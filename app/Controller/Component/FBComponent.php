@@ -23,7 +23,12 @@
     function getFriends()
     {
       $fb_friends = $this->facebook->api('/me/friends');
-      return $fb_friends;
+      return $fb_friends['data'];
+    }
+
+    function getStatus($userid=0)
+    {
+
     }
   }
 ?>
