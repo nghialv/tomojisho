@@ -1,8 +1,16 @@
 <?php
-/*game skeleton controller*/
+
+App::import('Component', 'FB');
 App::uses('AppController', 'Controller');
+
 class GameController extends AppController {
-  var $components = array('FB');
+  var $FB;
+
+  public __contruct($resquest=null, $respond=null)
+  {
+    parent::__construct($request, $response);
+    $this->FB = new FBComponent();
+  }
 
   public function beforeFilter()
   {
@@ -20,6 +28,5 @@ class GameController extends AppController {
     $this->set('friends', $fb_friends);
     $this->render('/Game/index');
   }
-
 }
 ?>

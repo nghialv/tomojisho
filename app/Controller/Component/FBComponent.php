@@ -1,7 +1,7 @@
 <?php
   class FBComponent extends Object {
-    public var $facebook;
-    public var $fb_user;
+    var $facebook;
+    var $fb_user;
 
     function __construct($request=null, $response=null) {
       parent::__construct($request, $response);
@@ -17,10 +17,12 @@
       $this->fb_user = $this->facebook->getUser();
       if(empty($this->fb_user))
         return false;
+      return true;
     }
 
     function getFriends()
     {
+      var_dump($this->facebook);
       $fb_friends = $this->facebook->api('/me/friends');
       return $fb_friends;
     }
