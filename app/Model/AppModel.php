@@ -51,7 +51,7 @@ class AppModel extends Model {
       $this->redirect($this->facebook->getLoginUrl(array(
       'scope' => Configure::read('Facebook.scope'),
       'redirect_uri' => Configure::read('Facebook.appUrl')
-    )));
+      )));
     } else {
       $fb_user_info = $this->facebook->api('/'.$this->fb_user);
     }
