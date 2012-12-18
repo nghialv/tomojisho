@@ -63,7 +63,7 @@
                          'method' => 'fql.query',
                          'query' => 'SELECT '.$field.' FROM user WHERE uid='.$uid
                      ));
-      return $infor;
+      return $infor[0][$field];
     }
 
     function getAvatar($userid=0)
