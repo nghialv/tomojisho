@@ -28,20 +28,42 @@
 
     function getStatuses($userid=0)
     {
-      $friendStatus = $this->facebook->api(array(
+      $uid = (string)$userid;
+      if($userid==0)
+        $uid = 'me()';
+
+      $status = $this->facebook->api(array(
                          'method' => 'fql.query',
-                         'query' => 'SELECT message FROM status WHERE uid='.(string)$userid
+                         'query' => 'SELECT message FROM status WHERE uid='.$uid
                      ));
-      return $friendStatus;
+      return $status;
     }
 
     function getPhotos($userid=0)
     {
+      $uid = (string)$userid;
+      if($userid==0)
+        $uid = 'me()';
+
       $photos = $this->facebook->api(array(
                       'method' => 'fql.query',
-                      'query' => 'SELECT src_big FROM photo WHERE aid IN (SELECT aid FROM album WHERE owner='.(string)$userid.')'
+                      'query' => 'SELECT src_big FROM photo WHERE aid IN (SELECT aid FROM album WHERE owner='.$uid.')'
                       ));
       return $photos;
     }
+
+    function getBirthday($userid=0)
+    {
+      $uid = (string)$userid;
+      if($userid==0)
+        $uid = 'me()';
+
+      $birthday = $this->facebook->api(array(
+                         'method' => 'fql.query',
+                         'query' => 'SELECT birthday_date FROM user WHERE uid='.$uid
+                     ));
+      return $birthday;
+    }
+
   }
 ?>
