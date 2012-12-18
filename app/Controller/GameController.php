@@ -53,7 +53,7 @@ class GameController extends AppController {
     $snum = count($statuses);
     $sindex = rand(1, $snum);
 
-    return array("friends" => $friends, "type" => "status", "data" => $statuses[$sindex] );
+    return array("friends" => $friends, "type" => "status", "data" => $statuses[$sindex], "ans" => $correctans);
   }
   
   public function display() {
