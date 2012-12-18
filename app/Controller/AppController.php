@@ -35,7 +35,7 @@ class AppController extends Controller {
   var $facebook;
 
   function __construct() {
-    parrent::__construct();
+    parent::__construct();
 
     App::import('Vendor', 'facebook/src/facebook');
 
