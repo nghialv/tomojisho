@@ -22,7 +22,11 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<?php echo $this->Html->charset(); ?>
-	<title>
+  <?php 
+    echo $this->Html->script('jquery');
+	  echo $this->Html->script('tomojisho');
+  ?>
+  <title>
 		<?php echo $cakeDescription ?>:
 		<?php echo $title_for_layout; ?>
 	</title>
