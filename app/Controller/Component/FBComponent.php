@@ -52,18 +52,30 @@
       return $photos;
     }
 
-    function getBirthday($userid=0)
+    // birthday_date, current_address
+    function getUserInfor($userid=0, $field)
     {
       $uid = (string)$userid;
       if($userid==0)
         $uid = 'me()';
 
-      $birthday = $this->facebook->api(array(
+      $infor = $this->facebook->api(array(
                          'method' => 'fql.query',
-                         'query' => 'SELECT birthday_date FROM user WHERE uid='.$uid
+                         'query' => 'SELECT '.$field.' FROM user WHERE uid='.$uid
                      ));
-      return $birthday;
+      return $infor;
     }
 
+    function getAvatar($userid=0)
+    {
+      $uid = (string)$userid;
+      if($userid==0)
+        $uid = 'me()';
+      $avatar = $this->facebook->api(array(
+                         'method' => 'fql.query',
+                         'query' => 'SELECT pic_big FROM profile WHERE id='.$uid
+                     ));
+      return $avatar;
+    }
   }
 ?>
