@@ -45,17 +45,13 @@ class GameController extends AppController {
       
     $snum = count($statuses);
     $sindex = rand(1, $snum);
-    var_dump($sindex);
-    var_dump($statuses[0]);
-    var_dump($statuses[$sindex]);
-    $correctstas = $statuses[$sindex];
 
-    return array("friends" => $friends, "type" => "status", "data" => $correctans );
+    return array("friends" => $friends, "type" => "status", "data" => $statuses[$index] );
   }
   
   public function display() {
-    
     $data = $this->setDataToDisp(); 
+    var_dump($data);
     $this->set('data', $data);
     $this->render('/Game/index');
   }
