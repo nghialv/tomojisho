@@ -2,11 +2,7 @@
 /*game skeleton controller*/
 App::uses('AppController', 'Controller');
 class GameController extends AppController {
-
-  public $fb_user;
-  public $fb_username;
-  public $fb_friends;
-
+/*
    public function beforeFilter(){
     $this->fb_user = $this->facebook->getUser();
 
@@ -32,8 +28,10 @@ class GameController extends AppController {
     }
   }
 
-
+*/
   public function display() {
+    $fb_friends = $this->Game->getFriends();
+    $this->set('friends', $fb_friends)
     $this->render('/Game/index');
   }
 
