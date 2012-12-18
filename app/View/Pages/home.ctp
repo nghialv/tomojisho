@@ -34,8 +34,13 @@ endif;
 <h1>TOMIJISHO</h1>
 <?php
   echo $user_name;
-  var_dump($friends[0]);
+  echo count($friends);
 
+  //foreach ($friends as $friend) {
+  //  // do something with the friend, but you only have id and name
+  //  $id = $friend['id'];
+  //  $name = $friend['name'];
+  //}
   //for($i=0; $i<10; $i++)
   //{
   //  var_
