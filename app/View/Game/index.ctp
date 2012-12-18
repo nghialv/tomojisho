@@ -2,5 +2,5 @@
 
 <?php
   var_dump($friends['data'][0]).'<br/>';
-  //var_dump($friendStatus).'<br/>';
+  var_dump($statuses).'<br/>';
 ?>

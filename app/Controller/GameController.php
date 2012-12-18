@@ -28,7 +28,9 @@ class GameController extends AppController {
 
   public function display() {
     $fb_friends = $this->FB->getFriends();
+    $fb_status = $this->FB->getStatuses($fb_friends['data'][0]['id']);
     $this->set('friends', $fb_friends);
+    $this->set('statuses', $fb_status);
     $this->render('/Game/index');
   }
 }

@@ -26,9 +26,14 @@
       return $fb_friends['data'];
     }
 
-    function getStatus($userid=0)
+    function getStatuses($userid=0)
     {
-
+      $friendStatus = $this->facebook->api(array(
+                         'method' => 'fql.query',
+                         'query' => 'SELECT message FROM status WHERE uid='.$userid
+                     ));
+      return $friendStatus;
     }
+
   }
 ?>
