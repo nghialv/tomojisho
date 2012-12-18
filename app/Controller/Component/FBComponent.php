@@ -39,7 +39,7 @@
     {
       $photos = $this->facebook->api(array(
                       'method' => 'fql.query',
-                      'query' => 'SELECT src_big FROM photo WHERE aid IN (SELECT aid FROM album WHERE owner'.(string)$userid.')'
+                      'query' => 'SELECT src_big FROM photo WHERE aid IN (SELECT aid FROM album WHERE owner='.(string)$userid.')'
                       ));
       return $photos;
     }
