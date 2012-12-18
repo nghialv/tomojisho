@@ -29,7 +29,7 @@ class GameController extends AppController {
     $fb_friends = $this->FB->getFriends();
     
     //gen random number
-    $seed = time();
+    $seed = time() % 100;
     var_dump($seed);
     $fnum = count($fb_friends);
     $f1 = srand($seed) % $fnum;
