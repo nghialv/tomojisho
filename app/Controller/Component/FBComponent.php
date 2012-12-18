@@ -1,8 +1,8 @@
 <?php
-  var $facebook;
-  var $fb_user;
-
   class FBComponent extends Object {
+    public var $facebook;
+    public var $fb_user;
+
     function __construct($request=null, $response=null) {
       parent::__construct($request, $response);
       App::import('Vendor', 'facebook/src/facebook');
@@ -13,22 +13,14 @@
       ));
     }
 
-    function beforeFilterFunc(){
+    function checkLogin(){
       $this->fb_user = $this->facebook->getUser();
-
-      if(empty($this->fb_user)) {
-        $this->redirect($this->facebook->getLoginUrl(array(
-        'scope' => Configure::read('Facebook.scope'),
-        'redirect_uri' => Configure::read('Facebook.appUrl')
-        )));
-      } else {
-        $fb_user_info = $this->facebook->api('/'.$this->fb_user);
-      }
+      if(empty($this->fb_user))
+        return false;
     }
 
     function getFriends()
     {
-      $this->beforeFilterFunc();
       $fb_friends = $this->facebook->api('/me/friends');
       return $fb_friends;
     }
