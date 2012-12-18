@@ -28,11 +28,12 @@ class GameController extends AppController {
  
   private function getRandomFriends() {
     $fb_friends = $this->FB->getFriends();
+    
     //gen random number
     $fnum = count($fb_friends);
     $f1 = rand(1, count($fnum));
     $f2 = -1;
-    while ($f2 != $f1) $f2 = rand(count($fnum));
+    while ($f2 != $f1) $f2 = rand(1, count($fnum));
 
     //return friends info
     return array( $fb_friends[$f1],
@@ -56,7 +57,7 @@ class GameController extends AppController {
     
     $data = $this->setDataToDisp(); 
     $this->set('data', $data);
-    $this->render('/Game/index');
+   $this->render('/Game/index');
   }
 }
 ?>
