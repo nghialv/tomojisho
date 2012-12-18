@@ -70,11 +70,11 @@ class GameController extends AppController {
     var_dump($choose);
     var_dump($ans);
     if ($choose % 2 == $ans % 2) {
-      $this->set('data', true); 
+      $this->set('data', 'true'); 
       $this->render('/Game/serialize');
     }
     else {
-      $this->set('data', false); 
+      $this->set('data', 'false'); 
       $this->render('/Game/serialize');
     }
   } 
