@@ -29,10 +29,8 @@ class GameController extends AppController {
     $fb_friends = $this->FB->getFriends();
     
     //gen random number
-    $seed = time();
-    var_dump($seed);
     $fnum = count($fb_friends);
-    $f1 = srand($seed) % $fnum;
+    $f1 = time() % $fnum;
     $f2 = $f1; 
 
     while ($f2 == $f1) {
@@ -55,7 +53,7 @@ class GameController extends AppController {
     $snum = count($statuses);
     $sindex = rand(1, $snum);
 
-    return array("friends" => $friends, "type" => "status", "data" => $statuses[$sindex] );
+    return array("friends" => $friends, "type" => "status", "data" => $statuses[$sindex], "ans" => $correctans);
   }
   
   public function display() {
