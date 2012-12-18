@@ -32,4 +32,19 @@ App::uses('Controller', 'Controller');
  * @link http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
+  var $facebook;
+
+  function __construct() {
+    parrent::__construct();
+
+    App::import('Vendor', 'facebook/src/facebook');
+
+    // Create a Facebook client API object
+    $this->facebook = new Facebook(array(
+      'appId' => Configure::read('Facebook.appId'),
+      'secret' => Configure::read('Facebook.secret'),
+      'cookie' => true)
+    );
+  }
 }
+
