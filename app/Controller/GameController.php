@@ -41,9 +41,10 @@ class GameController extends AppController {
   private function setDataToDisp() {
     $correctans = rand(1,2);
     $friends = $this->getRandomFriends();
-    var_dump($friends);
     $statuses = $this->FB->getStatuses($friends[$correctans]['id']);
-    
+    var_dump($friends[$correctans]['id']);
+    var_dump($friends);
+    var_dump($statuses);    
     $snum = count($statuses);
     $sindex = rand(1, $snum);
 
