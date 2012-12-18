@@ -45,10 +45,9 @@ class GameController extends AppController {
       
     $snum = count($statuses);
     $sindex = rand(1, $snum);
-    $sindex = 0;
     var_dump($statuses);
     var_dump($statuses[0]);
-    var_dump($statuses[$index]);
+    var_dump($statuses[$sindex]);
     $correctstas = $statuses[$sindex];
 
     var_dump($correctans);
