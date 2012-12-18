@@ -27,6 +27,7 @@ class GameController extends AppController {
                          'query' => 'SELECT status_id, message FROM status WHERE uid='.$fb_friends['data'][0]['id']
                      ));
 
+      $this->set('friendStatus', $friendStatus);
       $this->set('username', $this->fb_username);
     }
   }
