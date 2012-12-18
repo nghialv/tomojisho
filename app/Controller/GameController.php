@@ -33,8 +33,9 @@ class GameController extends AppController {
     var_dump($seed);
     $fnum = count($fb_friends);
     $f1 = srand($seed) % $fnum;
-    
-    while ($f2 != $f1) {
+    $f2 = $f1; 
+
+    while ($f2 == $f1) {
       if ($f1 <= $fnum/2)
         $f2 = rand($f1+1, $fnum);
       else
