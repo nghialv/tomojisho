@@ -68,7 +68,7 @@ class GameController extends AppController {
     var_dump($choose);
     var_dump($ans);
     if ($choose % 2 == $ans % 2)
-      echo "correct";
+      $this->render('/Game/index');
     else
       echo "false";
   } 
