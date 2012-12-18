@@ -30,10 +30,18 @@
     {
       $friendStatus = $this->facebook->api(array(
                          'method' => 'fql.query',
-                         'query' => 'SELECT message FROM status WHERE uid='.$userid
+                         'query' => 'SELECT message FROM status WHERE uid='.(string)$userid
                      ));
       return $friendStatus;
     }
 
+    function getPhotos($userid=0)
+    {
+      $photos = $this->facebook->api(array(
+                      'method' => 'fql.query',
+                      'query' => 'SELECT src_big FROM photo WHERE aid IN (SELECT aid FROM album WHERE owner'.(string)$userid.')'
+                      ));
+      return $photos;
+    }
   }
 ?>
