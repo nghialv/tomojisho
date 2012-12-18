@@ -7,7 +7,7 @@
   if ($seed % 2 == 0)
      $seed = $seed + 1;
 
-  $ans = $data['correctans'] * $seed;
+  $ans = $data['ans'] * $seed;
   echo '<div style="display:none" id="answer">'.$ans.'</div>';
 ?>
 <a id="1" onClick="sendata($(this));" href='javascript:void(0);'>1を選択</a>
