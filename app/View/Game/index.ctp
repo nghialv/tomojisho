@@ -4,3 +4,4 @@
   echo $data['friends'][2]['name']."</br>";
   echo $data['data']['message']."</br>";
 ?>
+<a href='/Game/index'>次</a>
