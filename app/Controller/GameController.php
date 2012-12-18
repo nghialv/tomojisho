@@ -35,9 +35,10 @@ class GameController extends AppController {
     $f1 = srand($seed) % $fnum;
     
     while ($f2 != $f1) {
-      var_dump($seed);
-      $seed = time();
-      $f2 = srand($seed) % $fnum;
+      if ($f1 <= $fnum/2)
+        $f2 = rand($f1+1, $fnum);
+      else
+        $f2 = rand(1, $f1-1);
     } 
 
     //return friends info
