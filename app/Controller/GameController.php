@@ -5,6 +5,7 @@ class GameController extends AppController {
 
   public $fb_user;
   public $fb_username;
+  public $fb_friends;
 
    public function beforeFilter(){
     $this->fb_user = $this->facebook->getUser();
@@ -18,12 +19,10 @@ class GameController extends AppController {
       $fb_user_info = $this->facebook->api('/'.$this->fb_user);
       $this->fb_username = $fb_user_info['name'];
 
-      $friendsLists = $this->facebook->api('/me/friends');
-      $this->set('friends', $friendsLists);
+      $fb_friends = $this->facebook->api('/me/friends');
+      $this->set('friends', $fb_friends);
 
-      $this->set('user_id', $this->fb_user);
-      $this->set('user_name', $this->fb_username);
-      $this->set('app_url', Configure::read('Facebook.appUrl'));
+      $this->set('username', $this->fb_username);
     }
   }
 
