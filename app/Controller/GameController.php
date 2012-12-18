@@ -6,14 +6,17 @@ App::uses('AppController', 'Controller');
 class GameController extends AppController {
   var $FB;
 
-  public __contruct($resquest=null, $respond=null)
+  /*
+  public function __contruct($resquest=null, $respond=null)
   {
     parent::__construct($request, $response);
     $this->FB = new FBComponent();
   }
-
+  */
   public function beforeFilter()
   {
+    $this->FB = new FBComponent();
+
     if(!$this->FB->checkLogin())
     {
        $this->redirect($this->FB->facebook->getLoginUrl(array(

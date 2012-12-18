@@ -22,7 +22,6 @@
 
     function getFriends()
     {
-      var_dump($this->facebook);
       $fb_friends = $this->facebook->api('/me/friends');
       return $fb_friends;
     }
