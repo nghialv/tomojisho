@@ -30,10 +30,9 @@ class GameController extends AppController {
     
     //gen random number
     $fnum = count($fb_friends);
-    $f1 = rand(1, count($fnum));
-    $f2 = $f1;
-
-    while ($f2 == $f1) $f2 = rand(1, count($fnum));
+    $f1 = rand(1, count($fnum)-1);
+    $f2 = rand($f1+1, count($fnum));
+    
     //return friends info
     return array( 1=>$fb_friends[$f1],
                   2=>$fb_friends[$f2]);
