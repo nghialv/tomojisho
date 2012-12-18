@@ -42,10 +42,16 @@ class GameController extends AppController {
     $correctans = rand(1,2);
     $friends = $this->getRandomFriends();
     $statuses = $this->FB->getStatuses($friends[$correctans]['id']);
-    var_dump($statuses);
+    
     $snum = count($statuses);
+    var_dump($snum);
+
     $sindex = rand(1, $snum);
+    var_dump($sindex);
+
     $correctstas = $statuses[$sindex];
+    var_dump($correctans);
+
     return array("friends" => $friends, "type" => "status", "data" => $correctans );
   }
   
