@@ -48,7 +48,7 @@ class GameController extends AppController {
     var_dump($snum);
 
     $sindex = rand(1, $snum);
-    var_dump($sindex);
+    $sindex = 5;
 
     $correctstas = $statuses[$sindex];
     var_dump($correctans['message']);
