@@ -34,6 +34,12 @@ endif;
 <h1>TOMIJISHO</h1>
 <?php
   echo $user_name;
+  var_dump($friends[0]);
+
+  //for($i=0; $i<10; $i++)
+  //{
+  //  var_
+  //}
 ?>
 
 <p id="url-rewriting-warning" style="background-color:#e32; color:#fff;">
