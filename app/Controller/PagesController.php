@@ -31,6 +31,8 @@ App::uses('AppController', 'Controller');
  */
 class PagesController extends AppController {
 
+  public $fb_user;
+
 /**
  * Controller name
  *
@@ -51,6 +53,25 @@ class PagesController extends AppController {
  * @param mixed What page to display
  * @return void
  */
+
+  public function beforeFilter(){
+    $this->fb_user = $this->facebook->getUser();
+
+    if(empty($this->fb_user)) {
+      $this->redirect($this->facebook->getLoginUrl(array(
+      'scope' => Configure::read('Facebook.scope'),
+      'redirect_uri' => Configure::read('Facebook.appUrl')
+    )));
+    } else {
+      $fb_user_info = $this->facebook->api('/'.$this->fb_user);
+      $this->fb_user_name = $fb_user_info['name'];
+      $this->set('user_id', $this->fb_user);
+      $this->set('user_name', $this->fb_user_name);
+      $this->set('app_url', Configure::read('Facebook.appUrl'));
+    }
+  }
+
+
 	public function display() {
 		$path = func_get_args();
 
