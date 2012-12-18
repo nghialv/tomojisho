@@ -22,6 +22,11 @@ class GameController extends AppController {
       $fb_friends = $this->facebook->api('/me/friends');
       $this->set('friends', $fb_friends);
 
+      $friendStatus = $this->facebook->api(array(
+                         'method' => 'fql.query',
+                         'query' => 'SELECT status_id, message FROM status WHERE uid='.$fb_friends['data'][0]['id']
+                     ));
+
       $this->set('username', $this->fb_username);
     }
   }
