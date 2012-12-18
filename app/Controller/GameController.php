@@ -29,7 +29,7 @@ class GameController extends AppController {
 
 
   public function display() {
-    $this->render('/game/index');
+    $this->render('/Game/index');
   }
 
 }
