@@ -65,6 +65,8 @@ class GameController extends AppController {
   public function judge() {
     $choose = $_POST['choose'];
     $ans = $_POST['ans'];   
+    var_dump($choose);
+    var_dump($ans);
     if ($choose % 2 == $ans % 2)
       echo "correct";
     else
