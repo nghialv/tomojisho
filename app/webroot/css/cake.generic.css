@@ -16,6 +16,10 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
+#tomojisho-app{
+  background: url('../img/background.jpg') repeat;
+}
+
 * {
 	margin:0;
 	padding:0;

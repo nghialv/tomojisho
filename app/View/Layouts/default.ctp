@@ -22,7 +22,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<?php echo $this->Html->charset(); ?>
-  <?php 
+  <?php
     echo $this->Html->script('jquery');
 	  echo $this->Html->script('tomojisho');
   ?>
@@ -40,7 +40,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		echo $this->fetch('script');
 	?>
 </head>
-<body>
+<body id="tomojisho-app">
 	<div id="container">
 		<div id="header">
 			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
