@@ -63,6 +63,8 @@ class GameController extends AppController {
   }
 
   public function judge() {
+    $this->autoLayout = false; 
+
     $choose = $_POST['choose'];
     $ans = $_POST['ans'];   
     var_dump($choose);
