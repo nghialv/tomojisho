@@ -34,17 +34,14 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
   var $facebook;
 
-  function __construct() {
-    parent::__construct();
-
+  function __construct($request=null, $response=null) {
+    parent::__construct($request, $response);
     App::import('Vendor', 'facebook/src/facebook');
-
-    // Create a Facebook client API object
     $this->facebook = new Facebook(array(
-      'appId' => Configure::read('Facebook.appId'),
-      'secret' => Configure::read('Facebook.secret'),
-      'cookie' => true)
-    );
+            'appId' => Configure::read('Facebook.appId'),
+            'secret' => Configure::read('Facebook.secret'),
+            'cookie' => true,
+     ));
   }
 }
 
