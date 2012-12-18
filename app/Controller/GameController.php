@@ -12,7 +12,6 @@ class GameController extends AppController {
     $this->FB = new FBComponent();
   }
   */
-
   public function beforeFilter()
   {
     $this->FB = new FBComponent();
@@ -33,18 +32,19 @@ class GameController extends AppController {
     $fnum = count($fb_friends);
     $f1 = rand(1, count($fnum));
     $f2 = -1;
-    while ($f2 != $f1) $f2 = rand(1, count($fnum));
-    var_dump($f2);
     var_dump($f1);
-    var_dump($fb_friends);
+    var_dump($f2);
+
+    while ($f2 != $f1) $f2 = rand(1, count($fnum));
     //return friends info
-    return array( $fb_friends[$f1],
-                  $fb_friends[$f2]);
+    return array( 1=>$fb_friends[$f1],
+                  2=>$fb_friends[$f2]);
   }
  
   private function setDataToDisp() {
     $correctans = rand(1,2);
     $friends = $this->getRandomFriends();
+    var_dump($friends);
     $statuses = $this->FB->getStatuses($friends[$correctans]['id']);
     
     $snum = count($statuses);
