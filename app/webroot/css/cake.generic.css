@@ -16,7 +16,7 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 #app-header{
-  height: 30px;
+  height: 50px;
 }
 
 p {
@@ -112,7 +112,7 @@ p {
  }
 
 body {
-    background-image:url('../img/background.png');
+    background-image:url('../img/background.jpg');
     background-repeat:no-repeat;
     background-position:center;
 	  background-size:cover;
@@ -148,7 +148,6 @@ h1, h2, h3, h4 {
 	margin-bottom:0.5em;
 }
 h1 {
-	background:#fff;
 	color: #003d4c;
 	font-size: 100%;
 }
@@ -200,7 +199,6 @@ p {
 	text-decoration: underline;
 }
 #content{
-	background: #fff;
 	clear: both;
 	color: #333;
 	padding: 10px 20px 40px 20px;
