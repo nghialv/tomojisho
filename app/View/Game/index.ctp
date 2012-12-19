@@ -34,6 +34,21 @@
 </div>
 
 <script type="text/javascript">
+  function sendata(input) {
+    $.post("/Game/judge", {choose: input.attr("id"), ans: $("#answer").html()},
+      function(data) {
+        alert(data);
+
+        if (sessionStorage.started) { //if initilized
+          if (data === 'true') {
+            sessionStorage.correctguess = parseInt(sessionStorage.correctguess) + 1;
+          }
+          sessionStorage.totalguess = parseInt(sessionStorage.totalguess) + 1;
+        }
+        window.location.href = "/Game/display";
+      });
+  }
+
   $(document).ready(function() {
     if (!sessionStorage.started) { //initialize
       sessionStorage.started = 1;
@@ -43,20 +58,5 @@
 
     //write point to screen
     $("body").append('<div>'+sessionStorage.correctguess+' / '+sessionStorage.totalguess+'</div>');
-
-    function sendata(input) {
-      $.post("/Game/judge", {choose: input.attr("id"), ans: $("#answer").html()},
-        function(data) {
-          alert(data);
-
-          if (sessionStorage.started) { //if initilized
-            if (data === 'true') {
-              sessionStorage.correctguess += 1;
-            }
-            sessionStorage.totalguess += 1;
-          }
-          window.location.href = "/Game/display";
-        });
-    }
   });
 </script>
