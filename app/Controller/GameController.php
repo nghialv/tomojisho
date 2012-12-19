@@ -60,15 +60,20 @@ class GameController extends AppController {
     $MAX_LOOP = 100;
     $error = -1;
     $count = 0;
-    while ($error == -1 && $count <= $MAX_LOOP) {
+    $data = 0;
+    while ($error == -1) {
       try{ 
         $error = 0;
         $data = $this->setDataToDisp(); 
       } catch (Exception $e) {
-        var_dump($e);
         $error = -1;
       }
+
       $count += 1;
+      if ($count >= $MAX_LOOP) {
+        var_dump("exceed max loop");  
+        break;
+      }
     }
     $this->set('data', $data);
     $this->render('/Game/index');
