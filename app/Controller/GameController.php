@@ -74,7 +74,6 @@ class GameController extends AppController {
           $error = -1;
         else
           $data = $statuses[$sindex];
-          if (strlen($data) < 1) $error = -1;
       }
       catch (Exception $e) {
         $error = -1; 
