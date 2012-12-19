@@ -1,4 +1,3 @@
-<div id="reset" ><button style="button" onClick="reset();">Reset game</button></div>
 <p>The feature of your friend</p>
   <div id="question-box">
     <?php
@@ -25,6 +24,8 @@
   </div>
   </div>
 
+<div id="reset" ><button style="button" onClick="reset();">Reset game</button></div>
+
 <?php
   $seed = rand(1,100000);
   if ($seed % 2 == 0)
@@ -49,7 +50,7 @@
         window.location.href = "/Game/display";
       });
   }
-  
+
   function reset() {
     sessionStorage.started = 1;
     sessionStorage.totalguess = 0;
