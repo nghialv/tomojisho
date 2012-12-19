@@ -30,7 +30,6 @@ p {
   width: 50%;
   height: auto;
   min-height: 20px;
-	max-height: 200px;
 
 	padding: 40px;
   margin: auto;
@@ -59,6 +58,10 @@ p {
 	/*border-radius: 10%;*/
 }
 
+.user1-box:hover{
+  -webkit-transform: scale(1.2);
+}
+
 .user2-box {
 	background-color: #fcf6cf;
 	width: 150px;
@@ -71,6 +74,10 @@ p {
 	border: green 5px outset;
   cursor:pointer
 	/*border-radius: 50%;*/
+}
+
+.user2:hover{
+  -webkit-transform: scale(1.2);
 }
 
 body {
