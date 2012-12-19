@@ -16,6 +16,7 @@
   function sendata(input) {
     $.post("/Game/judge", {choose: input.attr("id"), ans: $("#answer").html()},
       function(data) {
+        alert(data);
         window.location.href = "/Game/display";
       });
   } 
