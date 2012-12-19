@@ -34,6 +34,17 @@
   margin: auto;
 }
 
+#reset {
+  height: 50px;
+}
+
+#reset button{
+  float: right;
+  margin-right: 80px;
+  width: 100px;
+  height: 25px;
+}
+
 p {
   font-size: 20px;
 	margin-left:253px;
