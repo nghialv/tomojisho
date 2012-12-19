@@ -39,11 +39,17 @@
   function sendata(input) {
     $.post("/Game/judge", {choose: input.attr("id"), ans: $("#answer").html()},
       function(data) {
-        alert(data);
-
         if (sessionStorage.started) { //if initilized
           if (data === '"true"') {
             sessionStorage.correctguess = parseInt(sessionStorage.correctguess) + 1;
+            var fadeimg = 3-parseInt(input.attr("id"));
+            var selector = "user" + (fadeimg) + "-box";
+            $("."+selector+" #"+fadeimg).fadeTo('fast', 0.5, function(){});
+          }
+          else {
+            var fadeimg = (input.attr("id"));
+            var selector = "user" + (fadeimg) + "-box";
+            $("."+selector+" #"+fadeimg).fadeTo('fast', 0.5, function(){});
           }
           sessionStorage.totalguess = parseInt(sessionStorage.totalguess) + 1;
         }
