@@ -45,7 +45,7 @@ p {
   margin: auto;
 }
 
-#user1-box {
+.user1-box {
 	background-color: #fcf6cf;
 	width: 150px;
 	height: 150px;
@@ -55,10 +55,11 @@ p {
 	margin-left: 80px;
 
 	border: green 5px outset;
+  cursor:pointer
 	/*border-radius: 10%;*/
 }
 
-#user2-box {
+.user2-box {
 	background-color: #fcf6cf;
 	width: 150px;
 	height: 150px;
@@ -68,6 +69,7 @@ p {
 	margin-right: 80px;
 
 	border: green 5px outset;
+  cursor:pointer
 	/*border-radius: 50%;*/
 }
 
