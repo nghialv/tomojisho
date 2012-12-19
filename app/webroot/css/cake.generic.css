@@ -23,6 +23,7 @@ p {
   font-size: 20px;
 	margin-left:253px;
 	line-height: 20%;
+  color: white;
 }
 
 #question-box {
@@ -125,7 +126,6 @@ body {
 
 /** General Style Info **/
 body {
-	background: #003d4c;
 	color: #fff;
 	font-family:'lucida grande',verdana,helvetica,arial,sans-serif;
 	font-size:90%;

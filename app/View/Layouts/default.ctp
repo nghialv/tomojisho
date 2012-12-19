@@ -26,6 +26,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <body id="tomojisho-app">
 	<div id="container">
     <div id="app-header">
+      <img src="../img/logo.png"/>
       <h1 align="center">TOMOJISHO</h1>
     </div>
 		<div id="content">
