@@ -1,4 +1,4 @@
-<div id="reset" onClick="reset();">Reset game</div>
+<div id="reset" ><button style="button" onClick="reset();">Reset game</button></div>
 <p>The feature of your friend</p>
   <div id="question-box">
     <?php
