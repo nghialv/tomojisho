@@ -49,6 +49,8 @@ class GameController extends AppController {
     $MAX_LOOP = 100;
     $error = -1;
     $count = 0;
+    $data = NULL;
+
     while ($error == -1) {
       try {
         $correctans = rand(1,2);
@@ -61,13 +63,14 @@ class GameController extends AppController {
           
         $snum = count($statuses);
         $sindex = rand(1, $snum-1);
+        $data = $statuses[$sindex];
       }
       catch (Exception $e) {
         $error = -1; 
         var_dump($statuses);
       }
     }
-    return array("friends" => $friends, "type" => "status", "data" => $statuses[$sindex], "ans" => $correctans);
+    return array("friends" => $friends, "type" => "status", "data" => $data, "ans" => $correctans);
   }
   
   public function display() {
