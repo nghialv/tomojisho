@@ -30,9 +30,9 @@
           
           if (sessionStorage.started) { //if initilized
             if (data === 'true') {
-              sessionStorage.correctguess += 1;     
+              sessionStorage.correctguess = Integer.parseInt(sessionStorage.correctguess) + 1;
             }
-            sessionStorage.totalguess += 1;
+            sessionStorage.totalguess = Integer.parseInt(sessionStorage.totalguess) + 1;
           }
           window.location.href = "/Game/display";
         });
