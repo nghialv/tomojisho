@@ -1,4 +1,3 @@
-<p>The feature of your friend</p>
   <div id="question-box">
     <?php
        echo $data['data']['message']."</br>";
