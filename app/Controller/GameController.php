@@ -89,7 +89,7 @@ class GameController extends AppController {
     $this->render('/Game/index');
   }
 
-  public function welcomeScreen() {
+  public function welcome() {
     $this->render('/Game/welcome');
   }
 
