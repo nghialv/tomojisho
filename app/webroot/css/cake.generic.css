@@ -31,7 +31,7 @@
 
 #app-header hr {
   width: 80%;
-  margin: center;
+  margin: auto;
 }
 
 p {
@@ -216,7 +216,7 @@ p {
 #content{
 	clear: both;
 	color: #333;
-	padding: 10px 20px 40px 20px;
+	padding: 50px 20px 40px 20px;
 	overflow: auto;
 }
 #footer {
