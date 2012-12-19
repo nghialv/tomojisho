@@ -54,9 +54,14 @@ p {
 	margin-left: 80px;
 
 	border: green 5px outset;
-  cursor:pointer
+  cursor:pointer;
 	/*border-radius: 10%;*/
+
+  transform-duration: 0.5s;
   -webkit-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s; /* IE 9 */
+  -o-transition-duration: 0.5s; /* Opera */
+  -moz-transition-duration: 0.5s; /* Firefox */
 }
 
 .user1-box:hover{
@@ -79,7 +84,12 @@ p {
 	border: green 5px outset;
   cursor:pointer
 	/*border-radius: 50%;*/
-   -webkit-transition-duration: 0.5s;
+
+  transform-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s; /* IE 9 */
+  -o-transition-duration: 0.5s; /* Opera */
+  -moz-transition-duration: 0.5s; /* Firefox */
 }
 
 .user2-box:hover{
