@@ -47,7 +47,7 @@ p {
 
 	float: left;
 	padding: 40px;
-	margin-left: 320px;
+	margin-left: 20px;
 	margin-right: 5px;
 
 	border: green 5px outset;
@@ -59,7 +59,7 @@ p {
 	width: 150px;
 	height: 150px;
 
-	float: right;
+	float: left;
 	padding: 40px;
 	margin-left: 5px;
 	margin-right: 320px;
