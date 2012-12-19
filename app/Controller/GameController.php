@@ -65,6 +65,7 @@ class GameController extends AppController {
         $error = 0;
         $data = $this->setDataToDisp(); 
       } catch (Exception $e) {
+        var_dump($e);
         $error = -1;
       }
       $count += 1;
