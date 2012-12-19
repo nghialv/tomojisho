@@ -14,10 +14,8 @@
 <a id="2" onClick="sendata($(this));" href='javascript:void(0);'>2を選択</a>
 <script type="text/javascript">
   function sendata(input) {
-    alert($("#answer").val());
-    $.post("/Game/judge", {choose: input.attr("id"), ans: $("#answer").val()},
+    $.post("/Game/judge", {choose: input.attr("id"), ans: $("#answer").html()},
       function(data) {
-        alert(data);
         window.location.href = "/Game/display";
       });
   } 
