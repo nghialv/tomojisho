@@ -15,8 +15,23 @@
  * @since         CakePHP(tm)
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
+
+#tomojisho-app {
+  background: black;
+}
+
 #app-header{
-  height: 50px;
+  height: 80px;
+  text-align: center;
+}
+
+#app-header img{
+  height: 80px;
+}
+
+#app-header hr {
+  width: 80%;
+  margin: center;
 }
 
 p {
@@ -89,7 +104,7 @@ p {
   text-align: center;
 
 	border: green 5px outset;
-  cursor:pointer
+  cursor:pointer;
 
   transform-duration: 0.5s;
   -webkit-transition-duration: 0.5s;
