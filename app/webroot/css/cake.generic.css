@@ -17,7 +17,7 @@
  */
 
 #tomojisho-app {
-  background: url('../img/background.jpg');
+  background: black;
 }
 
 #app-header{
@@ -53,17 +53,17 @@ p {
 }
 
 #question-box {
-  max-width: 600px;
+  background-color: #fcf6cf;
+  width: 510px;
   height: auto;
   min-height: 20px;
 
-	padding: 20px;
+	padding: 40px;
   margin: auto;
 
-  margin-bottom: 20px;
-  color: white;
-  font-size: 20px;
-  text-align: center;
+  border: green 5px outset;
+	border-radius: 15px;
+  margin-bottom: 30px;
 }
 
 #users-box {

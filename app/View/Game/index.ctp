@@ -1,3 +1,4 @@
+<p>The feature of your friend</p>
   <div id="question-box">
     <?php
        echo $data['data']['message']."</br>";
@@ -24,7 +25,7 @@
   </div>
 
 <div id="reset" ><button style="button" onClick="reset();">Reset game</button></div>
-<div id="countdown">20</div>
+
 <?php
   $seed = rand(1,100000);
   if ($seed % 2 == 0)
@@ -38,17 +39,11 @@
   function sendata(input) {
     $.post("/Game/judge", {choose: input.attr("id"), ans: $("#answer").html()},
       function(data) {
+        alert(data);
+
         if (sessionStorage.started) { //if initilized
           if (data === '"true"') {
             sessionStorage.correctguess = parseInt(sessionStorage.correctguess) + 1;
-            var fadeimg = 3-parseInt(input.attr("id"));
-            var selector = "user" + (fadeimg) + "-box";
-            $("."+selector+" #"+fadeimg).fadeTo('fast', 0.5, function(){});
-          }
-          else {
-            var fadeimg = (input.attr("id"));
-            var selector = "user" + (fadeimg) + "-box";
-            $("."+selector+" #"+fadeimg).fadeTo('fast', 0.5, function(){});
           }
           sessionStorage.totalguess = parseInt(sessionStorage.totalguess) + 1;
         }
@@ -60,28 +55,10 @@
     sessionStorage.started = 1;
     sessionStorage.totalguess = 0;
     sessionStorage.correctguess = 0;
-    window.location.href = "/Game/welcome";
-  }
-
-  function nexttrigger() {
-    sessionStorage.totalguess += 1;
     window.location.href = "/Game/display";
   }
 
   $(document).ready(function() {
-    //timer
-    var interval = setInterval(function(){
-      var curtime = parseInt($("#countdown").html());
-      curtime--;
-      if(curtime <= 0) {
-        clearInterval(interval);
-        nexttrigger();
-      }
-      $("#countdown").html(curtime);
-    }, 1000);
-
-    var curtime = $("timer").html();
-
     if (!sessionStorage.started) { //initialize
       sessionStorage.started = 1;
       sessionStorage.totalguess = 0;
