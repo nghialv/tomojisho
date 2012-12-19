@@ -1,3 +1,4 @@
+<div id="reset" onClick="reset();">Reset game</div>
 <p>The feature of your friend</p>
   <div id="question-box">
     <?php
@@ -47,6 +48,13 @@
         }
         window.location.href = "/Game/display";
       });
+  }
+  
+  function reset() {
+    sessionStorage.started = 1;
+    sessionStorage.totalguess = 0;
+    sessionStorage.correctguess = 0;
+    window.location.href = "Game/display";
   }
 
   $(document).ready(function() {

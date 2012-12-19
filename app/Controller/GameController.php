@@ -12,7 +12,7 @@ class GameController extends AppController {
     $this->FB = new FBComponent();
   }
   */
-  private $CRITERION = array(1=>"image", 2=>"status", 3=>"birthday", 4=>"location");
+  private $CRITERION = array(1=>"image", 2=>"status");
 
   public function beforeFilter()
   {
