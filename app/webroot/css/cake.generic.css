@@ -56,10 +56,15 @@ p {
 	border: green 5px outset;
   cursor:pointer
 	/*border-radius: 10%;*/
+  -webkit-transition-duration: 0.5s;
 }
 
 .user1-box:hover{
-  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari and Chrome */
+  -o-transform: scale(1.2); /* Opera */
+  -moz-transform: scale(1.2); /* Firefox */
 }
 
 .user2-box {
@@ -74,11 +79,16 @@ p {
 	border: green 5px outset;
   cursor:pointer
 	/*border-radius: 50%;*/
+   -webkit-transition-duration: 0.5s;
 }
 
-.user2:hover{
-  -webkit-transform: scale(1.2);
-}
+.user2-box:hover{
+   transform: scale(1.2);
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari and Chrome */
+  -o-transform: scale(1.2); /* Opera */
+  -moz-transform: scale(1.2); /* Firefox */
+ }
 
 body {
     background-image:url('../img/background.png');
