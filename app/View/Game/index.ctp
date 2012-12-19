@@ -11,13 +11,13 @@
   <div id="users-box">
   <div id=" 1" class="user1-box" onClick="sendata($(this));" href='javascript:void(0);'>
     <?php
-      echo '<img src="'.$data['friends'][1]['avatar'].'/>';
+      echo '<img src="'.$data["friends"][1]["avatar"].'"/>';
     ?>
   </div>
 
   <div id="2" class="user2-box" onClick="sendata($(this));" href='javascript:void(0);'>
     <?php
-      echo '<img src="'.$data['friends'][2]['avatar'].'/>';
+      echo '<img src="'.$data["friends"][2]["avatar"].'"/>';
     ?>
   </div>
   </div>
