@@ -17,7 +17,7 @@
  */
 
 #tomojisho-app {
-  background: black;
+  background: url('../img/background.jpg');
 }
 
 #app-header{
