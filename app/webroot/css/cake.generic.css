@@ -15,6 +15,9 @@
  * @since         CakePHP(tm)
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
+#app-header{
+  height: 30px;
+}
 
 p {
   font-size: 20px;
@@ -22,7 +25,7 @@ p {
 	line-height: 20%;
 }
 
-#box1 {
+#question-box {
   background-color: #fcf6cf;
   width: 50%;
   height: auto;
@@ -37,7 +40,7 @@ p {
 	border-radius: 15px;
 }
 
-#box2 {
+#user1-box {
 	background-color: #fcf6cf;
 	width: 150px;
 	height: 150px;
@@ -51,7 +54,7 @@ p {
 	/*border-radius: 10%;*/
 }
 
-#box3 {
+#user2-box {
 	background-color: #fcf6cf;
 	width: 150px;
 	height: 150px;
@@ -69,11 +72,7 @@ body {
     background-image:url('../img/background.png');
     background-repeat:no-repeat;
     background-position:center;
-	background-size:cover;
-}
-
-#tomojisho-app{
-  background: url('../img/background.jpg') repeat;
+	  background-size:cover;
 }
 
 * {

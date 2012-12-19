@@ -25,9 +25,10 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 </head>
 <body id="tomojisho-app">
 	<div id="container">
-		<div id="content">
+    <div id="app-header">
       <h1 align="center">TOMOJISHO</h1>
-
+    </div>
+		<div id="content">
 			<?php echo $this->fetch('content'); ?>
 		</div>
 		<div id="footer">
