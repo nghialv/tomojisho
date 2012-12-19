@@ -25,7 +25,7 @@
   </div>
 
 <div id="reset" ><button style="button" onClick="reset();">Reset game</button></div>
-
+<div id="timer">20</div>
 <?php
   $seed = rand(1,100000);
   if ($seed % 2 == 0)
@@ -58,7 +58,24 @@
     window.location.href = "/Game/display";
   }
 
+  function nexttrigger() {
+    alert("trigger");    
+  }
+  
   $(document).ready(function() {
+    //timer
+    var interval = setInterval(function(){
+      var curtime = parseInt($("timer").html());"
+      curtime--;
+      if(curtime <= 0) {
+        clearInterval(interval);
+        nexttrigger();
+      }
+      $("timer").html(curtime);
+    }, 1000);
+
+    var curtime = $("timer").html();
+
     if (!sessionStorage.started) { //initialize
       sessionStorage.started = 1;
       sessionStorage.totalguess = 0;
