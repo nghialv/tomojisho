@@ -55,13 +55,14 @@
     sessionStorage.started = 1;
     sessionStorage.totalguess = 0;
     sessionStorage.correctguess = 0;
-    window.location.href = "/Game/welcome";
+    window.location.href = "/Game/display";
   }
 
   function nexttrigger() {
-    alert("trigger");
+    sessionStorage.totalguess += 1;
+    window.location.href = "/Game/display";
   }
-
+  
   $(document).ready(function() {
     //timer
     var interval = setInterval(function(){
