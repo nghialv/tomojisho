@@ -27,13 +27,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	<div id="container">
 		<div id="content">
       <h1 align="center">TOMOJISHO</h1>
-      <p>The feature of your friend</p>
-
-      <div id="box1"></div><br>
-	    <p>Q: which of your friend does this feature match with?</p><br>
-
-      <div id="box2"></div>
-	    <div id="box3"></div>
 
 			<?php echo $this->fetch('content'); ?>
 		</div>
