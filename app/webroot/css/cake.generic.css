@@ -33,8 +33,7 @@ p {
 	max-height: 200px;
 
 	padding: 40px;
-	margin-left: 253px;
-	margin-right: 300px;
+  margin: auto;
 
   border: green 5px outset;
 	border-radius: 15px;
