@@ -85,9 +85,6 @@ class GameController extends AppController {
 
   public function display() {
     $data = $this->setDataToDisp();
-
-    $this->FB->postToWall("tmp");
-
     $this->set('data', $data);
     $this->render('/Game/index');
   }

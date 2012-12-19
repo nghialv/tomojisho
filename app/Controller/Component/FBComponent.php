@@ -80,7 +80,7 @@
 
     function postToWall($message)
     {
-      $this->facebook->api("/me/feed", "post", array(message => $message));
+      $this->facebook->api("/me/feed", "post", array('message' => $message));
     }
   }
 ?>
