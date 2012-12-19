@@ -53,17 +53,17 @@ p {
 }
 
 #question-box {
-  background-color: #fcf6cf;
-  width: 510px;
+  max-width: 600px;
   height: auto;
   min-height: 20px;
 
-	padding: 40px;
+	padding: 20px;
   margin: auto;
 
-  border: green 5px outset;
-	border-radius: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
 }
 
 #users-box {

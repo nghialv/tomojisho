@@ -1,7 +1,6 @@
-<p>The feature of your friend</p>
   <div id="question-box">
     <?php
-       echo $data['data']['message']."</br>";
+       echo '"'.$data['data']['message'].'"'."</br>";
     ?>
     <div style="clear:both;"></div>
   </div><br>
