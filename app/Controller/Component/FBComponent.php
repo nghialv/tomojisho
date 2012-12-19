@@ -75,7 +75,7 @@
                          'method' => 'fql.query',
                          'query' => 'SELECT pic_big FROM profile WHERE id='.$uid
                      ));
-      return $avatar;
+      return $avatar[0]['pic_big'];
     }
   }
 ?>
