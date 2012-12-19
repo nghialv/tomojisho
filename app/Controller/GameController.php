@@ -57,10 +57,23 @@ class GameController extends AppController {
   }
   
   public function display() {
-    try{ 
-      $data = $this->setDataToDisp(); 
-    } catch (Exception $e) {
-      $data = $this->setDataToDisp(); 
+    $MAX_LOOP = 100;
+    $error = -1;
+    $count = 0;
+    $data = 0;
+    while ($error == -1) {
+      try{ 
+        $error = 0;
+        $data = $this->setDataToDisp(); 
+      } catch (Exception $e) {
+        $error = -1;
+      }
+
+      $count += 1;
+      if ($count >= $MAX_LOOP) {
+        var_dump("exceed max loop");  
+        break;
+      }
     }
     $this->set('data', $data);
     $this->render('/Game/index');
