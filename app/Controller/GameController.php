@@ -12,6 +12,8 @@ class GameController extends AppController {
     $this->FB = new FBComponent();
   }
   */
+  private $CRITERION = array(1=>"image", 2=>"status", 3=>"birthday", 4=>"location");
+
   public function beforeFilter()
   {
     $this->FB = new FBComponent();
@@ -39,6 +41,11 @@ class GameController extends AppController {
       else
         $f2 = rand(1, $f1-1);
     } 
+    $ava1 = $this->FB->getAvatar($fb_friends[$f1]['id']);
+    $ava2 = $this->FB->getAvatar($fb_friends[$f2]['id']);
+   
+    $fb_friends[$f1]['avatar'] = $ava1; 
+    $fb_friends[$f2]['avatar'] = $ava2; 
 
     //return friends info
     return array( 1=>$fb_friends[$f1],
