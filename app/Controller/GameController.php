@@ -67,8 +67,6 @@ class GameController extends AppController {
 
     $choose = $_POST['choose'];
     $ans = $_POST['ans'];   
-    var_dump($choose);
-    var_dump($ans);
     if ($choose % 2 == $ans % 2) {
       $this->set('data', 'true'); 
       $this->render('/Game/serialize');
