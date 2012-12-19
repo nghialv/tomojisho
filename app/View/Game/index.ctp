@@ -9,20 +9,19 @@
   <p>Q: which of your friend does this feature match with?</p><br>
 
   <div id="users-box">
-  <div id="user1-box">
+  <div id=" 1" class="user1-box" onClick="sendata($(this));" href='javascript:void(0);'>
     <?php
       echo $data['friends'][1]['name']."</br>";
     ?>
   </div>
 
-  <div id="user2-box">
+  <div id="2" class="user2-box" onClick="sendata($(this));" href='javascript:void(0);'>
     <?php
       echo $data['friends'][2]['name']."</br>";
     ?>
   </div>
   </div>
 
-<div>
 <?php
   $seed = rand(1,100000);
   if ($seed % 2 == 0)
@@ -31,10 +30,6 @@
   $ans = $data['ans'] * $seed;
   echo '<div style="display:none" id="answer">'.$ans.'</div>';
 ?>
-
-<a id="1" onClick="sendata($(this));" href='javascript:void(0);'>1を選択</a>
-<a id="2" onClick="sendata($(this));" href='javascript:void(0);'>2を選択</a>
-</div>
 
 <script type="text/javascript">
   function sendata(input) {
