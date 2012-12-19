@@ -40,6 +40,12 @@ p {
 	border-radius: 15px;
 }
 
+#users-box {
+  width: 800px;
+  height: 300px;
+  margin: auto;
+}
+
 #user1-box {
 	background-color: #fcf6cf;
 	width: 150px;
@@ -47,8 +53,7 @@ p {
 
 	float: left;
 	padding: 40px;
-	margin-left: 20px;
-	margin-right: 5px;
+	margin-left: 80px;
 
 	border: green 5px outset;
 	/*border-radius: 10%;*/
@@ -59,10 +64,9 @@ p {
 	width: 150px;
 	height: 150px;
 
-	float: left;
+	float: right;
 	padding: 40px;
-	margin-left: 5px;
-	margin-right: 320px;
+	margin-right: 80px;
 
 	border: green 5px outset;
 	/*border-radius: 50%;*/

@@ -8,7 +8,7 @@
 
   <p>Q: which of your friend does this feature match with?</p><br>
 
-  <div>
+  <div id="users-box">
   <div id="user1-box">
     <?php
       echo $data['friends'][1]['name']."</br>";
