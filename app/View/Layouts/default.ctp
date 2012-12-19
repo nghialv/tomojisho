@@ -25,28 +25,20 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 </head>
 <body id="tomojisho-app">
 	<div id="container">
-		<div id="header">
-		</div>
 		<div id="content">
-      <!--
-			<#?php echo $this->Session->flash(); ?>
-      -->
+      <h1 align="center">TOMOJISHO</h1>
+      <p>The feature of your friend</p>
+
+      <div id="box1"></div><br>
+	    <p>Q: which of your friend does this feature match with?</p><br>
+
+      <div id="box2"></div>
+	    <div id="box3"></div>
+
 			<?php echo $this->fetch('content'); ?>
 		</div>
-
 		<div id="footer">
-			<!--
-      <#?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false)
-				);
-			?>
-      -->
 		</div>
 	</div>
-  <!--
-	<#?php echo $this->element('sql_dump'); ?>
-  -->
 </body>
 </html>

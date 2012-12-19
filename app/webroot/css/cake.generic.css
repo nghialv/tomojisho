@@ -16,6 +16,62 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
+p {
+  font-size: 20px;
+	margin-left:253px;
+	line-height: 20%;
+}
+
+#box1 {
+  background-color: #fcf6cf;
+  width: 50%;
+  height: auto;
+  min-height: 20px;
+	max-height: 200px;
+
+	padding: 40px;
+	margin-left: 253px;
+	margin-right: 300px;
+
+  border: green 5px outset;
+	border-radius: 15px;
+}
+
+#box2 {
+	background-color: #fcf6cf;
+	width: 150px;
+	height: 150px;
+
+	float: left;
+	padding: 40px;
+	margin-left: 320px;
+	margin-right: 5px;
+
+	border: green 5px outset;
+	/*border-radius: 10%;*/
+}
+
+#box3 {
+	background-color: #fcf6cf;
+	width: 150px;
+	height: 150px;
+
+	float: right;
+	padding: 40px;
+	margin-left: 5px;
+	margin-right: 320px;
+
+	border: green 5px outset;
+	/*border-radius: 50%;*/
+}
+
+body {
+    background-image:url('../img/background.png');
+    background-repeat:no-repeat;
+    background-position:center;
+	background-size:cover;
+}
+
 #tomojisho-app{
   background: url('../img/background.jpg') repeat;
 }
