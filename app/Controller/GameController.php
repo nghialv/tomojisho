@@ -65,6 +65,8 @@ class GameController extends AppController {
         $sindex = rand(1, $snum-1);
         if(!isset($statuses[$sindex]))
           $error = -1;
+        else
+          $data = $statuses[$sindex];
       }
       catch (Exception $e) {
         $error = -1; 
