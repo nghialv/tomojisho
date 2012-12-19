@@ -15,6 +15,16 @@
  * @since         CakePHP(tm)
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
+#startgame-div{
+  text-align: center;
+  color: white;
+}
+
+#startgame-div button {
+  width: 100px;
+  height: 30px;
+  margin: auto;
+}
 
 #tomojisho-app {
   background: url('../img/background.jpg');
