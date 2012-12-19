@@ -3,10 +3,12 @@
     <?php
        echo $data['data']['message']."</br>";
     ?>
+    <div style="clear:both;"></div>
   </div><br>
 
   <p>Q: which of your friend does this feature match with?</p><br>
 
+  <div>
   <div id="user1-box">
     <?php
       echo $data['friends'][1]['name']."</br>";
@@ -17,6 +19,7 @@
     <?php
       echo $data['friends'][2]['name']."</br>";
     ?>
+  </div>
   </div>
 
 <div>
