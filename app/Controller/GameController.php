@@ -46,35 +46,32 @@ class GameController extends AppController {
   }
  
   private function setDataToDisp() {
-    $correctans = rand(1,2);
-    $friends = $this->getRandomFriends();
-    $statuses = $this->FB->getStatuses($friends[$correctans]['id']);
-      
-    $snum = count($statuses);
-    $sindex = rand(1, $snum-1);
+    $MAX_LOOP = 100;
+    $error = -1;
+    $count = 0;
+    while ($error == -1) {
+      try {
+        $correctans = rand(1,2);
+        $error = 0;
+        $count += 1;
 
+        if($count >= $MAX_LOOP) break;
+        $friends = $this->getRandomFriends();
+        $statuses = $this->FB->getStatuses($friends[$correctans]['id']);
+          
+        $snum = count($statuses);
+        $sindex = rand(1, $snum-1);
+      }
+      catch (Exception $e) {
+        $error = -1; 
+        var_dump($statuses);
+      }
+    }
     return array("friends" => $friends, "type" => "status", "data" => $statuses[$sindex], "ans" => $correctans);
   }
   
   public function display() {
-    $MAX_LOOP = 100;
-    $error = -1;
-    $count = 0;
-    $data = 0;
-    while ($error == -1) {
-      try{ 
-        $error = 0;
-        $data = $this->setDataToDisp(); 
-      } catch (Exception $e) {
-        $error = -1;
-      }
-
-      $count += 1;
-      if ($count >= $MAX_LOOP) {
-        var_dump("exceed max loop");  
-        break;
-      }
-    }
+    $data = $this->setDataToDisp(); 
     $this->set('data', $data);
     $this->render('/Game/index');
   }
