@@ -65,7 +65,7 @@
   $(document).ready(function() {
     //timer
     var interval = setInterval(function(){
-      var curtime = parseInt($("timer").html());"
+      var curtime = parseInt($("timer").html());
       curtime--;
       if(curtime <= 0) {
         clearInterval(interval);
