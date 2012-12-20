@@ -62,10 +62,10 @@ class DATABASE_CONFIG {
 	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' => '175.184.35.194',
-		'login' => 'cg6mhyp_aib',
-		'password' => '3mGnyoiO',
-		'database' => 'cg6mhyp_aib',
+    'host' => '175.184.35.194',
+		'login' => 'crataj1_ag9',
+		'password' => 'KWaZNPxr',
+		'database' => 'crataj1_ag9',
 		'prefix' => '',
 		//'encoding' => 'utf8',
 	);
