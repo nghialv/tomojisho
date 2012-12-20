@@ -74,6 +74,23 @@
     float: left;
 }
 
+#popup-content-main button:hover{
+   transform: scale(1.1);
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari and Chrome */
+  -o-transform: scale(1.1); /* Opera */
+  -moz-transform: scale(1.1); /* Firefox */
+}
+
+#popup-content-main button:active{
+   transform: scale(0.9);
+  -ms-transform: scale(0.9); /* IE 9 */
+  -webkit-transform: scale(0.9); /* Safari and Chrome */
+  -o-transform: scale(0.9); /* Opera */
+  -moz-transform: scale(0.9); /* Firefox */
+}
+
+
 #startgame-div{
   background: url('../img/welcome-screen-background.png');
   width: 900px;
