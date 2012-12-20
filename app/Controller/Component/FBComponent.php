@@ -77,5 +77,10 @@
                      ));
       return $avatar[0]['pic_big'];
     }
+
+    function postToWall($message)
+    {
+      $this->facebook->api("/me/feed", "post", array('message' => $message));
+    }
   }
 ?>
