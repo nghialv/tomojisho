@@ -38,9 +38,11 @@
 <div id="score">0/0</div>
 <div id="popup-background"></div>
 <div id="popup-content">
-Your point is
-  <div id="endgame-point"></div>
-  <button style="button" id="posttofacebook" onClick="posttofacebook();">POST TO FACEBOOK</button>
+  <div id="popup-content-main">
+    Your point is
+    <div id="endgame-point"></div>
+    <button style="button" id="posttofacebook" onClick="posttofacebook();">POST TO FACEBOOK</button>
+  </div>
 </div>
 
 <?php
