@@ -4,8 +4,8 @@
 </div>
 <script type="text/javascript">
   $(document).ready(function(){
-    sessionStorage.started = 1;
-    sessionStorage.totalguess = 0;
-    sessionStorage.correctguess = 0;
+    localStorage.started = 1;
+    localStorage.totalguess = 0;
+    localStorage.correctguess = 0;
   });
 <script>
