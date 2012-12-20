@@ -26,8 +26,8 @@
  * to use (in this case, /app/View/Pages/home.ctp)...
  */
 	#Router::connect('/debug', array('controller' => 'pages', 'action' => 'display', 'home'));
-  #Router::connect('/', array('controller' => 'game', 'action' => 'welcome'));
-  Router::connect('/', array('controller' => 'game', 'action' => 'display'));
+  Router::connect('/', array('controller' => 'game', 'action' => 'welcome'));
+  #Router::connect('/', array('controller' => 'game', 'action' => 'display'));
 /**
  * ...and connect the rest of 'Pages' controller's urls.
  */
