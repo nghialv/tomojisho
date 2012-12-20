@@ -49,9 +49,9 @@ Your point is
   function sendata(input) {
     $.post("/Game/judge", {choose: input.attr("id"), ans: $("#answer").html()},
       function(data) {
-        if (localStorage.started) { //if initilized
+        if (sessionStorage.started) { //if initilized
           if (data === '"true"') {
-            localStorage.correctguess = parseInt(localStorage.correctguess) + 1;
+            sessionStorage.correctguess = parseInt(sessionStorage.correctguess) + 1;
             $("#feedback").html("Congratulation, you're right");
             var selector = ".user-box#"+(3-input.attr("id"));
             $(selector).fadeOut();
@@ -62,17 +62,17 @@ Your point is
             input.fadeOut();
             $("#countdown").fadeOut();
           }
-          localStorage.totalguess = parseInt(localStorage.totalguess) + 1;
+          sessionStorage.totalguess = parseInt(sessionStorage.totalguess) + 1;
         }
-        $("#score").html(localStorage.correctguess+"/"+localStorage.totalguess);
+        $("#score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);
         window.location.href = "/Game/display";
       });
   }
 
   function reset() {
-    localStorage.started = 1;
-    localStorage.totalguess = 0;
-    localStorage.correctguess = 0;
+    sessionStorage.started = 1;
+    sessionStorage.totalguess = 0;
+    sessionStorage.correctguess = 0;
     window.location.href = "/Game/display";
   }
 
@@ -91,8 +91,8 @@ Your point is
           $(selector).fadeOut("slow", 0, function(){
             //update score
             $("#countdown").fadeOut();
-            localStorage.totalguess = parseInt(localStorage.totalguess)+1;
-            $("#score").html(localStorage.correctguess+"/"+localStorage.totalguess);
+            sessionStorage.totalguess = parseInt(sessionStorage.totalguess)+1;
+            $("#score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);
             window.location.href = "/Game/display";
           });
         }
@@ -100,7 +100,7 @@ Your point is
   }
 
   function posttofacebook() {
-      $.post("/Game/endgame", {correct: localStorage.correctguess, total: localStorage.totalguess},
+      $.post("/Game/endgame", {correct: sessionStorage.correctguess, total: sessionStorage.totalguess},
         function(data) {
           window.location.href = "/Game/welcome";
         }
@@ -112,28 +112,28 @@ Your point is
     var interval = setInterval(function(){
       $("#countdown").html(parseInt($("#countdown").html()) - 1);
       if(parseInt($("#countdown").html()) <= 0) {
-        localStorage.totalguess = parseInt(localStorage.totalguess)+1;
+        sessionStorage.totalguess = parseInt(sessionStorage.totalguess)+1;
         clearInterval(interval);
         triggerend();
       }
     }, 1000);
 
 
-    if (!localStorage.started) { //initialize
-      localStorage.started = 1;
-      localStorage.totalguess = 0;
-      localStorage.correctguess = 0;
+    if (!sessionStorage.started) { //initialize
+      sessionStorage.started = 1;
+      sessionStorage.totalguess = 0;
+      sessionStorage.correctguess = 0;
     }
     else {
-      localStorage.started = parseInt(localStorage.started) + 1;
-      if (parseInt(localStorage.started) > 20) {
+      sessionStorage.started = parseInt(sessionStorage.started) + 1;
+      if (parseInt(sessionStorage.started) > 20) {
         clearInterval(interval);
-        $("#endgame-point").html(localStorage.correctguess + "/" + localStorage.totalguess);
+        $("#endgame-point").html(sessionStorage.correctguess + "/" + sessionStorage.totalguess);
         $("#popup-background").show();
         $("#popup-content").show();
       }
     }
     //write point to screen
-    $("#score").html(localStorage.correctguess + "/" + localStorage.totalguess);
+    $("#score").html(sessionStorage.correctguess + "/" + sessionStorage.totalguess);
   });
 </script>
