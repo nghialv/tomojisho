@@ -8,7 +8,7 @@
   <p id="question-p">Q: which of your friend does this feature match with?</p><br>
 
   <div id="users-box">
-  <div id=" 1" class="user1-box user-box" onClick="sendata($(this));" href='javascript:void(0);'>
+  <div id="1" class="user1-box user-box" onClick="sendata($(this));" href='javascript:void(0);'>
     <?php
       echo '<img src="'.$data["friends"][1]["avatar"].'"/>';
       echo $data['friends'][1]['name']."</br>";
@@ -71,8 +71,7 @@
             if (data === '"true"') correctans = 1;
             else correctans = 2;
           }
-
-          var selector = ".user-box #"+(3-correctans);
+          var selector = ".user-box#"+(3-correctans);
           $(selector).fadeOut("fast", 0, function(){
             //update score
             sessionStorage.totalguess += 1;
