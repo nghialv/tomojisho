@@ -35,7 +35,10 @@
 
     function getCurrentUser()
     {
-      return $this->facebook->api('/me');
+      $u = $this->facebook->api('/me');
+      $avatar = $this->getAvatar($u['id']);
+      $current_user = array('id' => $u['id'], 'name' => $u['name'], 'avatar' => $avatar);
+      return $current_user;
     }
 
     function getFriends()
