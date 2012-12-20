@@ -27,7 +27,7 @@
   </div>
 
 <div id="feedback"></div>
-<div id="reset" ><button style="button" onClick="reset();"></button></div>
+<div id="reset" ><button style="button" onClick="reset();">Reset game</button></div>
 <div id="score">0/0</div>
 <div id="popup-background"></div>
 <div id="popup-content">
