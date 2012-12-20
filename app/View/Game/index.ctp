@@ -140,10 +140,10 @@
         $("#endgame-point").html(sessionStorage.correctguess + "/" + sessionStorage.totalguess);
         $("#popup-background").show();
         if (parseInt(sessionStorage.correctguess) < parseInt(sessionStorage.totalguess/2)) {
-          $("#popup-content").css('background', 'url(../img/wrong.png)');
+          $("#popup-content").css({'background': 'url(../img/wrong.png)', 'background-size':'530px 350px'});
         }
         else {
-          $("#popup-content").css('background', 'url(../img/right.png)');
+          $("#popup-content").css({'background': 'url(../img/right.png)', 'background-size':'530px 350px'});
         }
         
         $("#popup-content").show();
