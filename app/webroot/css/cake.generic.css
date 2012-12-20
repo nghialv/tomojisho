@@ -46,6 +46,11 @@
   margin-bottom: 20px;
 }
 
+#question-box img{
+  max-height: 300px;
+  margin: auto;
+}
+
 #reset {
   height: 50px;
 }
