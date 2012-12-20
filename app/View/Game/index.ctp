@@ -11,9 +11,9 @@
   <p id="question-p">
   <?php
     if ($data['type'] == "status")
-        echo 'だれが上のステータスを投稿しましたか?';
+        echo 'Q: だれが上のステータスを投稿しましたか?';
     else if ($data['type'] == "image")
-        echo 'だれが上の写真をアップロードしましたか?';
+        echo 'Q: だれが上の写真をアップロードしましたか?';
   ?>
   </p><br>
 

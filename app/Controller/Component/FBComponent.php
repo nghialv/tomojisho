@@ -45,9 +45,12 @@
       if($userid==0)
         $uid = 'me()';
 
+      $date = DateTime::createFromFormat('j-M-Y', '1-Jan-2011');
+      $from = $date->format('U');
+
       $status = $this->facebook->api(array(
                          'method' => 'fql.query',
-                         'query' => 'SELECT message FROM status WHERE uid='.$uid.'ORDER BY time DESC LIMIT 50'
+                         'query' => 'SELECT message FROM status WHERE uid='.$uid.' AND time >'.$from.' ORDER BY RAND() LIMIT 1'
                      ));
       return $status;
     }
@@ -58,9 +61,12 @@
       if($userid==0)
         $uid = 'me()';
 
+      $date = DateTime::createFromFormat('j-M-Y', '1-Jan-2011');
+      $from = $date->format('U');
+
       $photos = $this->facebook->api(array(
                       'method' => 'fql.query',
-                      'query' => 'SELECT src_big FROM photo WHERE aid IN (SELECT aid FROM album WHERE owner='.$uid.')'.'ORDER BY created DESC LIMIT 50'
+                      'query' => 'SELECT src_big FROM photo WHERE aid IN (SELECT aid FROM album WHERE owner='.$uid.')'.' AND created_time >'.$from.' ORDER BY RAND() LIMIT 1'
                       ));
       return $photos;
     }
