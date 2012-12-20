@@ -45,10 +45,6 @@
   </div>
 </div>
 
-<div id="loading-status">
-  <img src="../img/loading.gif"/>
-</div>
-
 <?php
   $seed = rand(1,100000);
   if ($seed % 2 == 0)
@@ -76,8 +72,6 @@
             $("#countdown").fadeOut();
           }
           sessionStorage.totalguess = parseInt(sessionStorage.totalguess) + 1;
-          $("#popup-background").show();
-          $'#loading-status').show();
         }
         $("#score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);
         window.location.href = "/Game/display";
@@ -141,7 +135,7 @@
     }
     else {
       sessionStorage.started = parseInt(sessionStorage.started) + 1;
-      if (parseInt(sessionStorage.started)-1 > 10) {
+      if (parseInt(sessionStorage.started)-1 > 3) {
         clearInterval(interval);
         $("#endgame-point").html(sessionStorage.correctguess + "/" + sessionStorage.totalguess);
         $("#popup-background").show();
