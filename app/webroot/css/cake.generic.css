@@ -31,9 +31,9 @@
   height: 100%;
   background-color: black;
   z-index:1001;
-  -moz-opacity: 0.8;
-  opacity:.80;
-  filter: alpha(opacity=80);
+  -moz-opacity: 0.5;
+  opacity:.50;
+  filter: alpha(opacity=50);
 }
 
 #popup-content {
@@ -47,6 +47,10 @@
   background-size: 530px 350px;
   z-index:1002;
   overflow: auto;
+}
+
+#loading-status {
+  display: none;
 }
 
 #popup-content-main {
