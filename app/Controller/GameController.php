@@ -75,8 +75,8 @@ class GameController extends AppController {
         else if ($criter == "image")
           $features = $this->FB->getPhotos($friends[$correctans]['id']);
 
-        //$snum = count($features);
-        $sindex = 0;//rand(1, $snum-1);
+        $snum = count($features);
+        $sindex = rand(1, $snum-1);
 
         if(!isset($features[$sindex]))
           $error = -1;
