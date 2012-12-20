@@ -117,10 +117,15 @@
       sessionStorage.started = parseInt(sessionStorage.started) + 1;
       if (parseInt(sessionStorage.started) > 20) {
         clearInterval(interval);
+        
         $("#popup-background").css({'background-color':'black',
+                                    'top':'0%',
+                                    'left':'0%',
+                                    'z-index':'1001';
                                     'width':'100%',
                                     'height':'100%',
-                                    'opacity':'0.4'});
+                                    'opacity':'0.4',
+                                    'top':'0%'});
       }
     }
     //write point to screen
