@@ -38,10 +38,22 @@
 
 #startgame-div{
   background: url('../img/welcome-screen-background.png');
+  width: 900px;
+  height: 600px;
+  margin: auto;
+
+  margin-top: -90px;
+  background-size: 900px 600px;
 }
 
 #startgame-div button{
   background: url('../img/start-button.png');
+  width: 150px;
+  height: 50px;
+  border: 0;
+  cursor: pointer;
+  margin-top: 470px;
+  margin-left: 550px;
 }
 
 #tomojisho-app {
