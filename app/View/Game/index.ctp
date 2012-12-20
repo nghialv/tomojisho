@@ -141,7 +141,7 @@
         $("#popup-background").show();
         if (parseInt(sessionStorage.correctguess) < parseInt(sessionStorage.totalguess/2)) {
           alert("sss");
-          $("#popup-content").css("background", "../img/wrong.png");
+          $("#popup-content").css({'background': '../img/wrong.png'});
         }
         $("#popup-content").show();
       }
