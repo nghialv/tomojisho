@@ -16,6 +16,12 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
+@font-face
+{
+  font-family: myScoreFont;
+  src: url('scoreboard.ttf');
+}
+
 #tomojisho-app {
   background: url('../img/background.jpg');
 }
@@ -37,10 +43,20 @@
 #question-p {
   width: 80%;
   margin: auto;
+  margin-bottom: 20px;
 }
 
 #reset {
   height: 50px;
+}
+
+#score{
+  color: red;
+  position: fixed;
+  top: 100px;
+  left: 940px;
+  font-size: 30px;
+  font-family: myScoreFont;
 }
 
 #reset button{
@@ -232,7 +248,7 @@ p {
 #content{
 	clear: both;
 	color: #333;
-	padding: 50px 20px 40px 20px;
+	padding: 30px 20px 40px 20px;
 	overflow: auto;
 }
 #footer {
