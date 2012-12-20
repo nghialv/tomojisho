@@ -30,7 +30,11 @@
 <div id="reset" ><button style="button" onClick="reset();"></button></div>
 <div id="score">0/0</div>
 <div id="popup-background"></div>
-<div id="popup-content"></div>
+<div id="popup-content">
+Your point is 
+  <div id="endgame-point"></div>
+  <button style="button" id="posttofacebook" onClick="posttofacebook();">POST TO FACEBOOK</button>
+</div>
 
 <?php
   $seed = rand(1,100000);
@@ -95,6 +99,15 @@
       );
   }
 
+  function posttofacebook() {
+      $.post("Game/endgame", {correct: sessionStorage.correctguess, total: sessionStorage.correctguess},
+        function(data) {
+          $("#popup-background").hide();
+          $("#popup-content").hide();
+          window.location.href = "/Game/welcome";
+        }
+      );
+  }
 
   $(document).ready(function() {
     //start timer
@@ -117,11 +130,12 @@
       sessionStorage.started = parseInt(sessionStorage.started) + 1;
       if (parseInt(sessionStorage.started) > 20) {
         clearInterval(interval);
+        $("#endgame-point").html(sessionStorage.correctguess + "/" + sessionStorage.totalguess);
         $("#popup-background").show();
         $("#popup-content").show();
       }
     }
     //write point to screen
-    $("#score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);
+    $("#score").html(sessionStorage.correctguess + "/" + sessionStorage.totalguess);
   });
 </script>
