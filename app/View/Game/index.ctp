@@ -120,7 +120,7 @@
         $("#popup-background").css({'background-color':'black',
                                     'width':'100%',
                                     'height':'100%',
-                                    'opacity':'0.4');
+                                    'opacity':'0.4'});
       }
     }
     //write point to screen
