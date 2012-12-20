@@ -34,7 +34,7 @@
 
       $status = $this->facebook->api(array(
                          'method' => 'fql.query',
-                         'query' => 'SELECT message FROM status WHERE uid='.$uid
+                         'query' => 'SELECT message FROM status WHERE uid='.$uid.'ORDER BY time DESC LIMIT 50'
                      ));
       return $status;
     }
@@ -47,7 +47,7 @@
 
       $photos = $this->facebook->api(array(
                       'method' => 'fql.query',
-                      'query' => 'SELECT src_big FROM photo WHERE aid IN (SELECT aid FROM album WHERE owner='.$uid.')'
+                      'query' => 'SELECT src_big FROM photo WHERE aid IN (SELECT aid FROM album WHERE owner='.$uid.')'.'ORDER BY created DESC LIMIT 50'
                       ));
       return $photos;
     }
