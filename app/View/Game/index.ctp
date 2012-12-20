@@ -45,10 +45,10 @@
         if (sessionStorage.started) { //if initilized
           if (data === '"true"') {
             sessionStorage.correctguess = parseInt(sessionStorage.correctguess) + 1;
-            $("#feedback").html() = "Congratulation, you're right";
+            $("#feedback").html("Congratulation, you're right");
           }
           else {
-            $("#feedback").html() = "Sorry, you're wrong";
+            $("#feedback").html("Sorry, you're wrong");
           }
           sessionStorage.totalguess = parseInt(sessionStorage.totalguess) + 1;
         }
