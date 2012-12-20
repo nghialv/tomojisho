@@ -48,12 +48,21 @@
 
 #startgame-div button{
   background: url('../img/start-button.png');
+  background-size: 150px 50px;
   width: 150px;
   height: 50px;
   border: 0;
   cursor: pointer;
   margin-top: 470px;
   margin-left: 550px;
+}
+
+#startgame-div button:hover{
+   transform: scale(1.2);
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari and Chrome */
+  -o-transform: scale(1.2); /* Opera */
+  -moz-transform: scale(1.2); /* Firefox */
 }
 
 #tomojisho-app {
