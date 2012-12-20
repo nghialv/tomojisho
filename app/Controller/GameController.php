@@ -58,7 +58,10 @@ class GameController extends AppController {
     $error = -1;
     $count = 0;
     $data = NULL;
-
+    //$criter = $CRITERION[rand(1, count($CRITERION))];
+    $criter = $CRITERION[1];
+    $features = NULL;
+    
     while ($error == -1) {
       try {
         $correctans = rand(1,2);
@@ -67,21 +70,25 @@ class GameController extends AppController {
 
         if($count >= $MAX_LOOP) break;
         $friends = $this->getRandomFriends();
-        $statuses = $this->FB->getStatuses($friends[$correctans]['id']);
-
-        $snum = count($statuses);
+        if ($criter == "status")             
+          $features = $this->FB->getStatuses($friends[$correctans]['id']);
+        else if ($criter == "image")
+          $features = $this->FB->getPhotos($friends[$correctans]['id']);
+        
+        $snum = count($featuress);
         $sindex = rand(1, $snum-1);
-        if(!isset($statuses[$sindex]))
+        
+        if(!isset($features[$sindex]))
           $error = -1;
         else
-          $data = $statuses[$sindex];
+          $data = $features[$sindex];
       }
       catch (Exception $e) {
         $error = -1;
-        var_dump($statuses);
+        var_dump($features);
       }
     }
-    return array("friends" => $friends, "type" => "status", "data" => $data, "ans" => $correctans);
+    return array("friends" => $friends, "type" => $criter, "data" => $data, "ans" => $correctans);
   }
 
   public function display() {
