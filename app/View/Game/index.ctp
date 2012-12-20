@@ -8,7 +8,14 @@
     <div style="clear:both;"></div>
   </div><br>
 
-  <p id="question-p">Q: which of your friend does this feature match with?</p><br>
+  <p id="question-p">
+  <?php>
+    if ($data['type'] == "status")
+        echo 'だれが上のステータスを投稿しましたか?';
+    else if ($data['type'] == "image")
+        echo 'だれが上の写真をアップロードしましたか?';
+  ?>
+  </p><br>
 
   <div id="users-box">
   <div id="1" class="user1-box user-box" onClick="sendata($(this));" href='javascript:void(0);'>
@@ -31,7 +38,7 @@
 <div id="score">0/0</div>
 <div id="popup-background"></div>
 <div id="popup-content">
-Your point is 
+Your point is
   <div id="endgame-point"></div>
   <button style="button" id="posttofacebook" onClick="posttofacebook();">POST TO FACEBOOK</button>
 </div>
