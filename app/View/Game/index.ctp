@@ -24,7 +24,7 @@
       echo $data['friends'][1]['name']."</br>";
     ?>
   </div>
-  <div id="countdown">200</div>
+  <div id="countdown">100</div>
   <div id="2" class="user2-box user-box" onClick="sendata($(this));" href='javascript:void(0);'>
     <?php
       echo '<img src="'.$data["friends"][2]["avatar"].'"/>';
@@ -133,7 +133,7 @@ Your point is
     }
     else {
       sessionStorage.started = parseInt(sessionStorage.started) + 1;
-      if (parseInt(sessionStorage.started) > 20) {
+      if (parseInt(sessionStorage.started)-1 > 10) {
         clearInterval(interval);
         $("#endgame-point").html(sessionStorage.correctguess + "/" + sessionStorage.totalguess);
         $("#popup-background").show();
