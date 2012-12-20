@@ -55,13 +55,13 @@ class GameController extends AppController {
   private function setDataToDisp() {
     $MAX_LOOP = 100;
     $CRITERION = array(1=>"image", 2=>"status");
-    
+
     $error = -1;
     $count = 0;
     $data = NULL;
     $criter = $CRITERION[rand(1, count($CRITERION))];
     $features = NULL;
-    
+
     while ($error == -1) {
       try {
         $correctans = rand(1,2);
@@ -70,14 +70,14 @@ class GameController extends AppController {
 
         if($count >= $MAX_LOOP) break;
         $friends = $this->getRandomFriends();
-        if ($criter == "status")             
+        if ($criter == "status")
           $features = $this->FB->getStatuses($friends[$correctans]['id']);
         else if ($criter == "image")
           $features = $this->FB->getPhotos($friends[$correctans]['id']);
-        
-        $snum = count($features);
-        $sindex = rand(1, $snum-1);
-        
+
+        //$snum = count($features);
+        $sindex = 0;//rand(1, $snum-1);
+
         if(!isset($features[$sindex]))
           $error = -1;
         else
@@ -119,10 +119,10 @@ class GameController extends AppController {
   public function endgame(){
     $correct = $_POST['correct'];
     $total = $_POST['total'];
-    
+
     $message = "has just got ".$correct."/".$total;
     $this->FB->postToWall($message);
-  
+
     $this->render('/Game/welcome');
   }
 }
