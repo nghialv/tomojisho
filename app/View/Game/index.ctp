@@ -114,7 +114,7 @@
     else {
       sessionStorage.started = parseInt(sessionStorage.started) + 1;
       if (parseInt(sessionStorage.started) > 20) {
-        $.colorbox({html:"Your point is".sessionStorage.correctguess."/".sessionStorage.totalguess});
+        $.colorbox({opacity:0.5, overlayClose:true, tml:"Your point is" + sessionStorage.correctguess + "/" + sessionStorage.totalguess});
         clearInterval(interval);
       }
     }
