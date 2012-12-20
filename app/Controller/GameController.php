@@ -117,7 +117,11 @@ class GameController extends AppController {
   }
 
   public function endgame(){
-    
+    $correct = $_POST['correct'];
+    $total = $_POST['total'];
+
+    $message = "has just got ".$correct."/".$total;
+    $this->FB->postToWall($message);
   }
 }
 ?>
