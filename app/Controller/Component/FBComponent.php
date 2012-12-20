@@ -17,6 +17,19 @@
       $this->fb_user = $this->facebook->getUser();
       if(empty($this->fb_user))
         return false;
+      if(!$this->checkToken())
+        return false;
+      return true;
+    }
+
+    function checkToken()
+    {
+      $u = $this->facebook->api(array(
+                         'method' => 'fql.query',
+                         'query' => 'SELECT uid2 FROM friend WHERE uid1= me() LIMIT 1'
+                     ));
+      if(empty($u))
+        return false;
       return true;
     }
 
