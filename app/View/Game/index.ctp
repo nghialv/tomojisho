@@ -100,7 +100,7 @@ Your point is
   }
 
   function posttofacebook() {
-      $.post("/Game/endgame", {correct: sessionStorage.correctguess, total: sessionStorage.correctguess},
+      $.post("/Game/endgame", {correct: sessionStorage.correctguess, total: sessionStorage.totalguess},
         function(data) {
           $("#popup-background").hide();
           $("#popup-content").hide();
