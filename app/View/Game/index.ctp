@@ -1,6 +1,6 @@
   <div id="question-box">
     <?php
-      if ($data['type'] == "status") 
+      if ($data['type'] == "status")
         echo '"'.$data['data']['message'].'"'."</br>";
       else if ($data['type'] == "image")
         echo '<img src="'.$data['data']['src_big'].'"/></br>';
@@ -17,7 +17,7 @@
       echo $data['friends'][1]['name']."</br>";
     ?>
   </div>
-
+  <div id="score">0/0</div>
   <div id="2" class="user2-box user-box" onClick="sendata($(this));" href='javascript:void(0);'>
     <?php
       echo '<img src="'.$data["friends"][2]["avatar"].'"/>';
@@ -28,7 +28,6 @@
 
 <div id="reset" ><button style="button" onClick="reset();">Reset game</button></div>
 <div id="countdown">20</div>
-<div id="score">0/0</div>
 
 <?php
   $seed = rand(1,100000);
@@ -71,11 +70,11 @@
             if (data === '"true"') correctans = 1;
             else correctans = 2;
           }
-          var selector = ".user-box#"+(3-correctans);    
+          var selector = ".user-box#"+(3-correctans);
           $(selector).fadeOut("slow", 0, function(){
             //update score
             sessionStorage.totalguess = parseInt(sessionStorage.totalguess)+1;
-            $("#score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);        
+            $("#score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);
             window.location.href = "/Game/display";
           });
         }
@@ -102,6 +101,6 @@
     }
 
     //write point to screen
-    $("#score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);        
+    $("#score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);
   });
 </script>
