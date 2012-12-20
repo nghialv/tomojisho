@@ -48,11 +48,13 @@
             sessionStorage.correctguess = parseInt(sessionStorage.correctguess) + 1;
             $("#feedback").html("Congratulation, you're right");
             var selector = ".user-box#"+(3-input.attr("id"));
-            $(selector).fadeOut("slow",0,function(){});
+            $(selector).fadeOut();
+            $("#countdown").fadeOut();
           }
           else {
             $("#feedback").html("Sorry, you're wrong");
-            input.fadeOut("slow",0,function(){});
+            input.fadeOut();
+            $("#countdown").fadeOut();
           }
           sessionStorage.totalguess = parseInt(sessionStorage.totalguess) + 1;
         }
@@ -82,6 +84,7 @@
           var selector = ".user-box#"+(3-correctans);
           $(selector).fadeOut("slow", 0, function(){
             //update score
+            $("#countdown").fadeOut();
             sessionStorage.totalguess = parseInt(sessionStorage.totalguess)+1;
             $("#score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);
             window.location.href = "/Game/display";
@@ -108,7 +111,13 @@
       sessionStorage.totalguess = 0;
       sessionStorage.correctguess = 0;
     }
-
+    else {
+      sessionStorage.started = parseInt(sessionStorage.started) + 1;
+      if (parseInt(sessionStorage.started) > 20) {
+        $.colorbox({html:"Your point is".sessionStorage.correctguess."/".sessionStorage.totalguess});
+        clearInterval(interval);
+      }
+    }
     //write point to screen
     $("#score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);
   });
