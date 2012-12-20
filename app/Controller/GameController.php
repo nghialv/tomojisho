@@ -66,26 +66,21 @@ class GameController extends AppController {
 
         if($count >= $MAX_LOOP) break;
         $friends = $this->getRandomFriends();
+        $statuses = $this->FB->getStatuses($friends[$correctans]['id']);
 
-        $feature = 2;//rand(1,2);
-        if($CRITERION[$feature] == 'status')
-          $features = $this->FB->getStatuses($friends[$correctans]['id']);
-        else if($CRITERION[$feature] == 'image')
-          $features = $this->FB->getPhotos($friends[$correctans]['id']);
-
-        $snum = count($features);
+        $snum = count($statuses);
         $sindex = rand(1, $snum-1);
-        if(!isset($features[$sindex]))
+        if(!isset($statuses[$sindex]))
           $error = -1;
         else
-          $data = $features[$sindex];
+          $data = $statuses[$sindex];
       }
       catch (Exception $e) {
         $error = -1;
-        var_dump($features);
+        var_dump($statuses);
       }
     }
-    return array("friends" => $friends, "type" => $CRITERION[$feature], "data" => $data, "ans" => $correctans);
+    return array("friends" => $friends, "type" => "status", "data" => $data, "ans" => $correctans);
   }
 
   public function display() {
