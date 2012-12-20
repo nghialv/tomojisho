@@ -65,7 +65,7 @@
 }
 
 #countdown{
-  width: 160px;
+  width: 140px;
   float: left;
   color: white;
   text-align: center;
@@ -74,6 +74,14 @@
   font-size: 70px;
   font-family: myScoreFont;
   color: yellow;
+}
+
+#feedback{
+  width: 600px;
+  margin: auto;
+  min-height: 50px;
+  color: white;
+  font-size: 100px;
 }
 
 #reset button{
