@@ -12,7 +12,6 @@ class GameController extends AppController {
     $this->FB = new FBComponent();
   }
   */
-  private $CRITERION = array(1=>"image", 2=>"status");
 
   public function beforeFilter()
   {
@@ -55,11 +54,12 @@ class GameController extends AppController {
 
   private function setDataToDisp() {
     $MAX_LOOP = 100;
+    $CRITERION = array(1=>"image", 2=>"status");
+    
     $error = -1;
     $count = 0;
     $data = NULL;
-    //$criter = $CRITERION[rand(1, count($CRITERION))];
-    $criter = $CRITERION[1];
+    $criter = $CRITERION[rand(1, count($CRITERION))];
     $features = NULL;
     
     while ($error == -1) {
@@ -75,7 +75,7 @@ class GameController extends AppController {
         else if ($criter == "image")
           $features = $this->FB->getPhotos($friends[$correctans]['id']);
         
-        $snum = count($featuress);
+        $snum = count($features);
         $sindex = rand(1, $snum-1);
         
         if(!isset($features[$sindex]))
