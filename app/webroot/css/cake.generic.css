@@ -33,7 +33,15 @@
   z-index:1001;
   -moz-opacity: 0.8;
   opacity:.80;
-  filter: alpha(opacity=80); 
+  filter: alpha(opacity=80);
+}
+
+#startgame-div{
+  background: url('../img/welcome-screen-background.png');
+}
+
+#startgame-div button{
+  background: url('../img/start-button.png');
 }
 
 #tomojisho-app {
