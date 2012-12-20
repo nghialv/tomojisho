@@ -145,7 +145,7 @@
         else {
           $("#popup-content").css('background', 'url(../img/right.png)');
         }
-        }
+        
         $("#popup-content").show();
       }
     }
