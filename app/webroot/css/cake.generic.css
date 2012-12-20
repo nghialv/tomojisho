@@ -24,7 +24,7 @@
 }
 #popup-background {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;
@@ -96,12 +96,21 @@
 }
 
 #startgame-div button:hover{
-   transform: scale(1.2);
-  -ms-transform: scale(1.2); /* IE 9 */
-  -webkit-transform: scale(1.2); /* Safari and Chrome */
-  -o-transform: scale(1.2); /* Opera */
-  -moz-transform: scale(1.2); /* Firefox */
+   transform: scale(1.1);
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari and Chrome */
+  -o-transform: scale(1.1); /* Opera */
+  -moz-transform: scale(1.1); /* Firefox */
 }
+
+#startgame-div button:active{
+   transform: scale(1.0);
+  -ms-transform: scale(1.0); /* IE 9 */
+  -webkit-transform: scale(1.0); /* Safari and Chrome */
+  -o-transform: scale(1.0); /* Opera */
+  -moz-transform: scale(1.0); /* Firefox */
+}
+
 
 #tomojisho-app {
   background: url('../img/background.jpg');
@@ -146,12 +155,21 @@
 }
 
 #reset button:hover{
-   transform: scale(1.2);
-  -ms-transform: scale(1.2); /* IE 9 */
-  -webkit-transform: scale(1.2); /* Safari and Chrome */
-  -o-transform: scale(1.2); /* Opera */
-  -moz-transform: scale(1.2); /* Firefox */
+   transform: scale(1.1);
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari and Chrome */
+  -o-transform: scale(1.1); /* Opera */
+  -moz-transform: scale(1.1); /* Firefox */
 }
+
+#reset button:active{
+   transform: scale(1.0);
+  -ms-transform: scale(1.0); /* IE 9 */
+  -webkit-transform: scale(1.0); /* Safari and Chrome */
+  -o-transform: scale(1.0); /* Opera */
+  -moz-transform: scale(1.0); /* Firefox */
+}
+
 
 #reset2 button {
   background: url('../img/restart-button.png');
@@ -162,6 +180,22 @@
   cursor: pointer;
   margin-left: 20px;
   margin-top: 19px;
+}
+
+#reset2 button:hover{
+   transform: scale(1.1);
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari and Chrome */
+  -o-transform: scale(1.1); /* Opera */
+  -moz-transform: scale(1.1); /* Firefox */
+}
+
+#reset2 button:active{
+   transform: scale(1.0);
+  -ms-transform: scale(1.0); /* IE 9 */
+  -webkit-transform: scale(1.0); /* Safari and Chrome */
+  -o-transform: scale(1.0); /* Opera */
+  -moz-transform: scale(1.0); /* Firefox */
 }
 
 
@@ -235,11 +269,11 @@ p {
 	border-radius: 15px;
 	cursor:pointer;
 
-	transform-duration: 0.5s;
-	-webkit-transition-duration: 0.5s;
-	-ms-transition-duration: 0.5s; /* IE 9 */
-	-o-transition-duration: 0.5s; /* Opera */
-	-moz-transition-duration: 0.5s; /* Firefox */
+	transform-duration: 0.35s;
+	-webkit-transition-duration: 0.35s;
+	-ms-transition-duration: 0.35s; /* IE 9 */
+	-o-transition-duration: 0.35s; /* Opera */
+	-moz-transition-duration: 0.35s; /* Firefox */
 }
 
 .user1-box img{
@@ -249,11 +283,19 @@ p {
 }
 
 .user1-box:hover{
-  transform: scale(1.2);
-  -ms-transform: scale(1.2); /* IE 9 */
-  -webkit-transform: scale(1.2); /* Safari and Chrome */
-  -o-transform: scale(1.2); /* Opera */
-  -moz-transform: scale(1.2); /* Firefox */
+  transform: scale(1.1);
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari and Chrome */
+  -o-transform: scale(1.1); /* Opera */
+  -moz-transform: scale(1.1); /* Firefox */
+}
+
+.user1-box:active{
+  transform: scale(1.0);
+  -ms-transform: scale(1.0); /* IE 9 */
+  -webkit-transform: scale(1.0); /* Safari and Chrome */
+  -o-transform: scale(1.0); /* Opera */
+  -moz-transform: scale(1.0); /* Firefox */
 }
 
 .user2-box {
@@ -269,11 +311,11 @@ p {
 	border-radius: 15px;
 	cursor:pointer;
 
-  transform-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  -ms-transition-duration: 0.5s; /* IE 9 */
-  -o-transition-duration: 0.5s; /* Opera */
-  -moz-transition-duration: 0.5s; /* Firefox */
+  transform-duration: 0.35s;
+  -webkit-transition-duration: 0.35s;
+  -ms-transition-duration: 0.35s; /* IE 9 */
+  -o-transition-duration: 0.35s; /* Opera */
+  -moz-transition-duration: 0.35s; /* Firefox */
 }
 
 .user2-box img{
@@ -283,12 +325,20 @@ p {
 }
 
 .user2-box:hover{
-   transform: scale(1.2);
-  -ms-transform: scale(1.2); /* IE 9 */
-  -webkit-transform: scale(1.2); /* Safari and Chrome */
-  -o-transform: scale(1.2); /* Opera */
-  -moz-transform: scale(1.2); /* Firefox */
+   transform: scale(1.1);
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari and Chrome */
+  -o-transform: scale(1.1); /* Opera */
+  -moz-transform: scale(1.1); /* Firefox */
  }
+
+.user2-box:active{
+  transform: scale(1.0);
+  -ms-transform: scale(1.0); /* IE 9 */
+  -webkit-transform: scale(1.0); /* Safari and Chrome */
+  -o-transform: scale(1.0); /* Opera */
+  -moz-transform: scale(1.0); /* Firefox */
+}
 
 body {
     background-image:url('../img/background.jpg');
