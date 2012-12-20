@@ -73,6 +73,23 @@
     float: left;
 }
 
+#popup-content-main button:hover{
+   transform: scale(1.1);
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari and Chrome */
+  -o-transform: scale(1.1); /* Opera */
+  -moz-transform: scale(1.1); /* Firefox */
+}
+
+#popup-content-main button:active{
+   transform: scale(0.9);
+  -ms-transform: scale(0.9); /* IE 9 */
+  -webkit-transform: scale(0.9); /* Safari and Chrome */
+  -o-transform: scale(0.9); /* Opera */
+  -moz-transform: scale(0.9); /* Firefox */
+}
+
+
 #startgame-div{
   background: url('../img/welcome-screen-background.png');
   width: 900px;
@@ -103,11 +120,11 @@
 }
 
 #startgame-div button:active{
-   transform: scale(1.0);
-  -ms-transform: scale(1.0); /* IE 9 */
-  -webkit-transform: scale(1.0); /* Safari and Chrome */
-  -o-transform: scale(1.0); /* Opera */
-  -moz-transform: scale(1.0); /* Firefox */
+   transform: scale(0.9);
+  -ms-transform: scale(0.9); /* IE 9 */
+  -webkit-transform: scale(0.9); /* Safari and Chrome */
+  -o-transform: scale(0.9); /* Opera */
+  -moz-transform: scale(0.9); /* Firefox */
 }
 
 
@@ -162,11 +179,11 @@
 }
 
 #reset button:active{
-   transform: scale(1.0);
-  -ms-transform: scale(1.0); /* IE 9 */
-  -webkit-transform: scale(1.0); /* Safari and Chrome */
-  -o-transform: scale(1.0); /* Opera */
-  -moz-transform: scale(1.0); /* Firefox */
+   transform: scale(0.9);
+  -ms-transform: scale(0.9); /* IE 9 */
+  -webkit-transform: scale(0.9); /* Safari and Chrome */
+  -o-transform: scale(0.9); /* Opera */
+  -moz-transform: scale(0.9); /* Firefox */
 }
 
 
@@ -190,11 +207,11 @@
 }
 
 #reset2 button:active{
-   transform: scale(1.0);
-  -ms-transform: scale(1.0); /* IE 9 */
-  -webkit-transform: scale(1.0); /* Safari and Chrome */
-  -o-transform: scale(1.0); /* Opera */
-  -moz-transform: scale(1.0); /* Firefox */
+   transform: scale(0.9);
+  -ms-transform: scale(0.9); /* IE 9 */
+  -webkit-transform: scale(0.9); /* Safari and Chrome */
+  -o-transform: scale(0.9); /* Opera */
+  -moz-transform: scale(0.9); /* Firefox */
 }
 
 
@@ -290,11 +307,11 @@ p {
 }
 
 .user1-box:active{
-  transform: scale(1.0);
-  -ms-transform: scale(1.0); /* IE 9 */
-  -webkit-transform: scale(1.0); /* Safari and Chrome */
-  -o-transform: scale(1.0); /* Opera */
-  -moz-transform: scale(1.0); /* Firefox */
+  transform: scale(0.8);
+  -ms-transform: scale(0.8); /* IE 9 */
+  -webkit-transform: scale(0.8); /* Safari and Chrome */
+  -o-transform: scale(0.8); /* Opera */
+  -moz-transform: scale(0.8); /* Firefox */
 }
 
 .user2-box {
@@ -332,11 +349,11 @@ p {
  }
 
 .user2-box:active{
-  transform: scale(1.0);
-  -ms-transform: scale(1.0); /* IE 9 */
-  -webkit-transform: scale(1.0); /* Safari and Chrome */
-  -o-transform: scale(1.0); /* Opera */
-  -moz-transform: scale(1.0); /* Firefox */
+  transform: scale(0.8);
+  -ms-transform: scale(0.8); /* IE 9 */
+  -webkit-transform: scale(0.8); /* Safari and Chrome */
+  -o-transform: scale(0.8); /* Opera */
+  -moz-transform: scale(0.8); /* Firefox */
 }
 
 body {

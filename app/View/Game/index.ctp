@@ -40,8 +40,8 @@
 <div id="popup-content">
   <div id="popup-content-main">
     <div id="endgame-point"></div>
-    <button style="button" id="posttofacebook" onClick="posttofacebook();">POST TO FACEBOOK</button>
-    <div id="reset" ><button style="button" onClick="reset();"></button></div>
+    <button style="button" id="posttofacebook" onClick="posttofacebook();"></button>
+    <div id="reset2" ><button style="button" onClick="reset();"></button></div>
   </div>
 </div>
 
