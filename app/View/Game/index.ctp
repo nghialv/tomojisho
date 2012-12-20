@@ -40,8 +40,6 @@
   function sendata(input) {
     $.post("/Game/judge", {choose: input.attr("id"), ans: $("#answer").html()},
       function(data) {
-        alert(data);
-
         if (sessionStorage.started) { //if initilized
           if (data === '"true"') {
             sessionStorage.correctguess = parseInt(sessionStorage.correctguess) + 1;
@@ -71,11 +69,11 @@
             if (data === '"true"') correctans = 1;
             else correctans = 2;
           }
-          var selector = ".user-box#"+(3-correctans);
-          $(selector).fadeOut("fast", 0, function(){
+          var selector = ".user-box#"+(3-correctans);    
+          $(selector).fadeOut("slow", 0, function(){
             //update score
             sessionStorage.totalguess += 1;
-            $("score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);
+            $("#score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);        
             window.location.href = "/Game/display";
           });
         }
@@ -102,6 +100,6 @@
     }
 
     //write point to screen
-    $("score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);
+    $("#score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);        
   });
 </script>
