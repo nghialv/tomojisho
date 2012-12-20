@@ -36,11 +36,10 @@
 <div id="feedback"></div>
 <div id="reset" ><button style="button" onClick="reset();"></button></div>
 <div id="score">0/0</div>
-<div id="popup-background"></div>
 <div id="popup-content">
   <div id="popup-content-main">
     <div id="endgame-point"></div>
-    <button style="button" id="posttofacebook" onClick="posttofacebook();">POST TO FACEBOOK</button>
+    <button style="button" id="posttofacebook" onClick="posttofacebook();"></button>
     <div id="reset2" ><button style="button" onClick="reset();"></button></div>
   </div>
 </div>
