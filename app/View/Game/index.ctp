@@ -118,6 +118,7 @@
       if (parseInt(sessionStorage.started) > 20) {
         clearInterval(interval);
         $("#popup-background").show();
+        $("#popup-content").show();
       }
     }
     //write point to screen
