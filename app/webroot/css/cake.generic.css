@@ -59,18 +59,18 @@
   color: red;
   position: fixed;
   top: 100px;
-  left: 940px;
+  right: 10px;
   font-size: 30px;
   font-family: myScoreFont;
 }
 
 #countdown{
-  width: 100px;
+  width: 180px;
   float: left;
   color: white;
   text-align: center;
   margin: auto;
-  margin-left: 40px;
+  padding-top: 60px;
   font-size: 70px;
   font-family: myScoreFont;
   color: yellow;
