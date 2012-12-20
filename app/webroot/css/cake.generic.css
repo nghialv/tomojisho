@@ -64,6 +64,18 @@
   font-family: myScoreFont;
 }
 
+#countdown{
+  width: 100px;
+  float: left;
+  color: white;
+  text-align: center;
+  margin: auto;
+  margin-left: 40px;
+  font-size: 70px;
+  font-family: myScoreFont;
+  color: yellow;
+}
+
 #reset button{
   float: right;
   margin-right: 80px;
