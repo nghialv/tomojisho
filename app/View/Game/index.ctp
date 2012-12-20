@@ -9,7 +9,7 @@
   </div><br>
 
   <p id="question-p">
-  <?php>
+  <?php
     if ($data['type'] == "status")
         echo 'だれが上のステータスを投稿しましたか?';
     else if ($data['type'] == "image")
