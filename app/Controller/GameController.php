@@ -122,6 +122,13 @@ class GameController extends AppController {
 
     $message = "has just got ".$correct."/".$total;
     $this->FB->postToWall($message);
+    $me = $this->FB->fb_user;
+    $this->User->save(array(
+        'user_id' => $me['id'],
+        'user_name' => $me['name'],
+        'correct' => $correct,
+        'total' => $total
+    ));
 
     $this->render('/Game/welcome');
   }
