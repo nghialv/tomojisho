@@ -4,6 +4,8 @@ App::import('Component', 'FB');
 App::uses('AppController', 'Controller');
 
 class GameController extends AppController {
+  public $uses = array('User');
+  
   var $FB=NULL;
   /*
   public function __contruct($resquest=null, $respond=null)
@@ -123,6 +125,7 @@ class GameController extends AppController {
     $message = "has just got ".$correct."/".$total;
     $this->FB->postToWall($message);
     $me = $this->FB->fb_user;
+    var_dump($me);
     $this->User->save(array(
         'user_id' => $me['id'],
         'user_name' => $me['name'],
