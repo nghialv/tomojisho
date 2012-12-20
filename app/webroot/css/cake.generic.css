@@ -104,12 +104,13 @@
 }
 
 #question-box img{
-  max-height: 300px;
+  max-height: 200px;
   margin: auto;
 }
 
 #reset {
   height: 50px;
+  text-align: center;
 }
 
 #reset button {
