@@ -33,6 +33,11 @@
       return true;
     }
 
+    function getCurrentUser()
+    {
+      return $this->facebook->api('/me');
+    }
+
     function getFriends()
     {
       $fb_friends = $this->facebook->api('/me/friends');
