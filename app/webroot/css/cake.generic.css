@@ -152,6 +152,15 @@
   -moz-transform: scale(1.2); /* Firefox */
 }
 
+#reset2 button {
+  background: url('../img/restart-button.png');
+  background-size: 150px 45px;
+  width: 150px;
+  height: 45px;
+  border: 0;
+  cursor: pointer;
+}
+
 #score{
   color: red;
   position: fixed;
