@@ -62,14 +62,16 @@
     margin-left: 60px;
 }
 
-#endgame-point button
+#popup-content-main button
 {
     width: 120px;
-    height: 40px;
-    margin-left: 40px;
+    height: 50px;
+    margin-left: -40px;
     margin-top: 20px;
     background: url('../img/share_button.png');
-    background-size: 120px 40px;
+    background-size: 120px 50px;
+    border: none;
+    float: left;
 }
 
 #startgame-div{
@@ -150,6 +152,18 @@
   -o-transform: scale(1.2); /* Opera */
   -moz-transform: scale(1.2); /* Firefox */
 }
+
+#reset2 button {
+  background: url('../img/restart-button.png');
+  background-size: 120px 50px;
+  width: 120px;
+  height: 50px;
+  border: 0;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-top: 19px;
+}
+
 
 #score{
   color: red;
