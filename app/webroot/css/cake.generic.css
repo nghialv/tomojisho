@@ -59,13 +59,13 @@
   color: red;
   position: fixed;
   top: 100px;
-  right: 10px;
-  font-size: 30px;
+  right: 30px;
+  font-size: 50px;
   font-family: myScoreFont;
 }
 
 #countdown{
-  width: 180px;
+  width: 140px;
   float: left;
   color: white;
   text-align: center;
@@ -74,6 +74,15 @@
   font-size: 70px;
   font-family: myScoreFont;
   color: yellow;
+}
+
+#feedback{
+  width: 800px;
+  margin: auto;
+  text-align: center;
+  min-height: 50px;
+  color: white;
+  font-size: 50px;
 }
 
 #reset button{
@@ -117,16 +126,17 @@ p {
 
 	float: left;
 	margin-left: 100px;
-  text-align: center;
+	text-align: center;
 
-	border: green 5px outset;
-  cursor:pointer;
+	border: 15px solid #fbf5e6;
+	border-radius: 15px;
+	cursor:pointer;
 
-  transform-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  -ms-transition-duration: 0.5s; /* IE 9 */
-  -o-transition-duration: 0.5s; /* Opera */
-  -moz-transition-duration: 0.5s; /* Firefox */
+	transform-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+	-ms-transition-duration: 0.5s; /* IE 9 */
+	-o-transition-duration: 0.5s; /* Opera */
+	-moz-transition-duration: 0.5s; /* Firefox */
 }
 
 .user1-box img{
@@ -150,10 +160,11 @@ p {
 
 	float: right;
 	margin-right: 100px;
-  text-align: center;
+	text-align: center;
 
-	border: green 5px outset;
-  cursor:pointer;
+	border: 15px solid #fbf5e6;
+	border-radius: 15px;
+	cursor:pointer;
 
   transform-duration: 0.5s;
   -webkit-transition-duration: 0.5s;
