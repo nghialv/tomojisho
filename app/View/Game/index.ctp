@@ -110,7 +110,6 @@
   function posttofacebook() {
       $.post("/Game/endgame", {correct: sessionStorage.correctguess, total: sessionStorage.totalguess},
         function(data) {
-          alert(data);
           window.location.href = "/Game/welcome";
         }
       );
