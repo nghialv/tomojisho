@@ -1,4 +1,4 @@
-  <div id="question-box">
+<div id="question-box">
     <?php
        echo '"'.$data['data']['message'].'"'."</br>";
     ?>
@@ -8,14 +8,14 @@
   <p>Q: which of your friend does this feature match with?</p><br>
 
   <div id="users-box">
-  <div id=" 1" class="user1-box" onClick="sendata($(this));" href='javascript:void(0);'>
+  <div id=" 1" class="user1-box user-box" onClick="sendata($(this));" href='javascript:void(0);'>
     <?php
       echo '<img src="'.$data["friends"][1]["avatar"].'"/>';
       echo $data['friends'][1]['name']."</br>";
     ?>
   </div>
 
-  <div id="2" class="user2-box" onClick="sendata($(this));" href='javascript:void(0);'>
+  <div id="2" class="user2-box user-box" onClick="sendata($(this));" href='javascript:void(0);'>
     <?php
       echo '<img src="'.$data["friends"][2]["avatar"].'"/>';
       echo $data['friends'][2]['name']."</br>";
@@ -24,6 +24,8 @@
   </div>
 
 <div id="reset" ><button style="button" onClick="reset();">Reset game</button></div>
+<div id="countdown">20</div>
+<div id="score">0/0</div>
 
 <?php
   $seed = rand(1,100000);
@@ -57,7 +59,41 @@
     window.location.href = "/Game/welcome";
   }
 
+  function triggerend() {
+    endeffect(-1);
+  }
+
+  function endeffect(correctans) {
+      $.post("/Game/judge", {choose: 1, ans: $("#answer").html()},
+        function(data) {
+          if (correctans === -1){
+            if (data === '"true"') correctans = 1;
+            else correctans = 2;
+          }
+        }
+      );  
+
+      var selector = ".user-box #"+(3-correctans);    
+      $(selector).fadeOut("fast", 0, function(){
+        //update score
+        $("score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);        
+        window.location.href = "/Game/display";
+      });
+  }
+
+
   $(document).ready(function() {
+    //start timer
+    var interval = setInterval(function(){
+      if(parseInt($("#countdown").html()) <= 0) {
+        sessionStorage.totalguess += 1;
+        clearInterval(interval);
+        triggerend();
+      }
+      $("#countdown").html(parseInt($("#countdown").html()) - 1);
+    }, 1000);
+
+
     if (!sessionStorage.started) { //initialize
       sessionStorage.started = 1;
       sessionStorage.totalguess = 0;
@@ -65,6 +101,6 @@
     }
 
     //write point to screen
-    $("body").append('<div>'+sessionStorage.correctguess+' / '+sessionStorage.totalguess+'</div>');
+    $("score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);        
   });
 </script>
