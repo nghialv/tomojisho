@@ -1,6 +1,7 @@
+<p>The feature of your friend</p>
   <div id="question-box">
     <?php
-       echo '"'.$data['data']['message'].'"'."</br>";
+       echo $data['data']['message']."</br>";
     ?>
     <div style="clear:both;"></div>
   </div><br>
@@ -54,7 +55,7 @@
     sessionStorage.started = 1;
     sessionStorage.totalguess = 0;
     sessionStorage.correctguess = 0;
-    window.location.href = "/Game/welcome";
+    window.location.href = "/Game/display";
   }
 
   $(document).ready(function() {
