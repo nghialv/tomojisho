@@ -67,6 +67,7 @@
   function endeffect(correctans) {
       $.post("/Game/judge", {choose: 1, ans: $("#answer").html()},
         function(data) {
+          alert(data);
           if (correctans === -1){
             if (data === '"true"') correctans = 1;
             else correctans = 2;
