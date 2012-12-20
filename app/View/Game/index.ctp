@@ -71,30 +71,28 @@
             if (data === '"true"') correctans = 1;
             else correctans = 2;
           }
-        }
         
-        var selector = ".user-box #"+(3-correctans);    
-        $(selector).fadeOut("fast", 0, function(){
-          //update score
-          sessionStorage.totalguess += 1;
-          $("score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);        
-          window.location.href = "/Game/display";
-        });
+          var selector = ".user-box #"+(3-correctans);    
+          $(selector).fadeOut("fast", 0, function(){
+            //update score
+            sessionStorage.totalguess += 1;
+            $("score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);        
+            window.location.href = "/Game/display";
+          });
+        }
       );  
-
-      
   }
 
 
   $(document).ready(function() {
     //start timer
     var interval = setInterval(function(){
+      $("#countdown").html(parseInt($("#countdown").html()) - 1);
       if(parseInt($("#countdown").html()) <= 0) {
         sessionStorage.totalguess += 1;
         clearInterval(interval);
         triggerend();
       }
-      $("#countdown").html(parseInt($("#countdown").html()) - 1);
     }, 1000);
 
 
