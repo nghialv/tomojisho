@@ -43,7 +43,6 @@
   left: 25%;
   width: 530px;
   height: 350px;
-  background: url('../img/right.png');
   background-size: 530px 350px;
   z-index:1002;
   overflow: auto;
