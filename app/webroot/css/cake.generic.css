@@ -117,16 +117,17 @@ p {
 
 	float: left;
 	margin-left: 100px;
-  text-align: center;
+	text-align: center;
 
-	border: green 5px outset;
-  cursor:pointer;
+	border: 15px solid #fbf5e6;
+	border-radius: 15px;
+	cursor:pointer;
 
-  transform-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  -ms-transition-duration: 0.5s; /* IE 9 */
-  -o-transition-duration: 0.5s; /* Opera */
-  -moz-transition-duration: 0.5s; /* Firefox */
+	transform-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+	-ms-transition-duration: 0.5s; /* IE 9 */
+	-o-transition-duration: 0.5s; /* Opera */
+	-moz-transition-duration: 0.5s; /* Firefox */
 }
 
 .user1-box img{
@@ -150,10 +151,11 @@ p {
 
 	float: right;
 	margin-right: 100px;
-  text-align: center;
+	text-align: center;
 
-	border: green 5px outset;
-  cursor:pointer;
+	border: 15px solid #fbf5e6;
+	border-radius: 15px;
+	cursor:pointer;
 
   transform-duration: 0.5s;
   -webkit-transition-duration: 0.5s;
