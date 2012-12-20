@@ -1,6 +1,9 @@
   <div id="question-box">
     <?php
-      echo '"'.$data['data']['message'].'"'."</br>";
+      if ($data['type'] == "status") 
+        echo '"'.$data['data']['message'].'"'."</br>";
+      else if ($data['type'] == "image")
+        echo '<img src="'.$data['data']['src_big'].'"/></br>';
     ?>
     <div style="clear:both;"></div>
   </div><br>
@@ -64,7 +67,6 @@
   function endeffect(correctans) {
       $.post("/Game/judge", {choose: 1, ans: $("#answer").html()},
         function(data) {
-          alert(data);
           if (correctans === -1){
             if (data === '"true"') correctans = 1;
             else correctans = 2;
@@ -72,7 +74,7 @@
           var selector = ".user-box#"+(3-correctans);    
           $(selector).fadeOut("slow", 0, function(){
             //update score
-            sessionStorage.totalguess += 1;
+            sessionStorage.totalguess = parseInt(sessionStorage.totalguess)+1;
             $("#score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);        
             window.location.href = "/Game/display";
           });
@@ -86,7 +88,7 @@
     var interval = setInterval(function(){
       $("#countdown").html(parseInt($("#countdown").html()) - 1);
       if(parseInt($("#countdown").html()) <= 0) {
-        sessionStorage.totalguess += 1;
+        sessionStorage.totalguess = parseInt(sessionStorage.totalguess)+1;
         clearInterval(interval);
         triggerend();
       }
