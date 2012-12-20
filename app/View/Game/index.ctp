@@ -28,7 +28,7 @@
 
 <div id="reset" ><button style="button" onClick="reset();">Reset game</button></div>
 <div id="score">0/0</div>
-
+<div id="feedback"></div>
 <?php
   $seed = rand(1,100000);
   if ($seed % 2 == 0)
@@ -45,9 +45,14 @@
         if (sessionStorage.started) { //if initilized
           if (data === '"true"') {
             sessionStorage.correctguess = parseInt(sessionStorage.correctguess) + 1;
+            $("#feedback").html() = "Congratulation, you're right";
+          }
+          else {
+            $("#feedback").html() = "Sorry, you're wrong";
           }
           sessionStorage.totalguess = parseInt(sessionStorage.totalguess) + 1;
         }
+        $("#score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);
         window.location.href = "/Game/display";
       });
   }
