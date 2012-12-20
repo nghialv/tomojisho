@@ -90,6 +90,10 @@ class GameController extends AppController {
     $this->render('/Game/index');
   }
 
+  public function welcome() {
+    $this->render('/Game/welcome');
+  }
+
   public function judge() {
     $this->autoLayout = false;
 
