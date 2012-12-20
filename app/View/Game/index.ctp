@@ -115,10 +115,10 @@
     }
     else {
       sessionStorage.started = parseInt(sessionStorage.started) + 1;
-      if (parseInt(sessionStorage.started) >= 20) {
+      if (parseInt(sessionStorage.started) > 20) {
         clearInterval(interval);
-        $("#popup-background").show();
-       }
+      }
+    }
     //write point to screen
     $("#score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);
   });
