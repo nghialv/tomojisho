@@ -29,7 +29,6 @@
 <div id="feedback"></div>
 <div id="reset" ><button style="button" onClick="reset();">Reset game</button></div>
 <div id="score">0/0</div>
-<div id="popup-background"></div>
 <div id="popup-content"></div>
 
 <?php
@@ -117,7 +116,9 @@
       sessionStorage.started = parseInt(sessionStorage.started) + 1;
       if (parseInt(sessionStorage.started) >= 20) {
         clearInterval(interval);
-        $("#popup-background").css({"display":"block"});
+        $("#content").append('<div id="popup-background"></div>');
+        $("#popup-background").fadeIn();
+
        }
     //write point to screen
     $("#score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);
