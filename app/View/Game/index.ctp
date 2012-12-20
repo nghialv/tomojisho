@@ -121,7 +121,7 @@
         $("#popup-background").css({'background-color':'black',
                                     'top':'0%',
                                     'left':'0%',
-                                    'z-index':'1001';
+                                    'z-index':'1001',
                                     'width':'100%',
                                     'height':'100%',
                                     'opacity':'0.4',
