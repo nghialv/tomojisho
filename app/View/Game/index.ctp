@@ -1,12 +1,11 @@
-<p>The feature of your friend</p>
   <div id="question-box">
     <?php
-       echo $data['data']['message']."</br>";
+      echo '"'.$data['data']['message'].'"'."</br>";
     ?>
     <div style="clear:both;"></div>
   </div><br>
 
-  <p>Q: which of your friend does this feature match with?</p><br>
+  <p id="question-p">Q: which of your friend does this feature match with?</p><br>
 
   <div id="users-box">
   <div id=" 1" class="user1-box user-box" onClick="sendata($(this));" href='javascript:void(0);'>
@@ -72,16 +71,16 @@
             if (data === '"true"') correctans = 1;
             else correctans = 2;
           }
-        
-          var selector = ".user-box #"+(3-correctans);    
+
+          var selector = ".user-box #"+(3-correctans);
           $(selector).fadeOut("fast", 0, function(){
             //update score
             sessionStorage.totalguess += 1;
-            $("score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);        
+            $("score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);
             window.location.href = "/Game/display";
           });
         }
-      );  
+      );
   }
 
 
@@ -104,6 +103,6 @@
     }
 
     //write point to screen
-    $("score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);        
+    $("score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);
   });
 </script>
