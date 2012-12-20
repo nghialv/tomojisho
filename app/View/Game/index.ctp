@@ -139,6 +139,8 @@
         clearInterval(interval);
         $("#endgame-point").html(sessionStorage.correctguess + "/" + sessionStorage.totalguess);
         $("#popup-background").show();
+        if (sessionStorage.correctguess < sessionStorage.totalguess/2)
+          $("#popup-content").css("background", "../img/wrong.png")
         $("#popup-content").show();
       }
     }
