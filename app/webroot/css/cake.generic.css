@@ -77,11 +77,12 @@
 }
 
 #feedback{
-  width: 600px;
+  width: 800px;
   margin: auto;
+  text-align: center;
   min-height: 50px;
   color: white;
-  font-size: 100px;
+  font-size: 50px;
 }
 
 #reset button{
