@@ -39,7 +39,6 @@
 <div id="popup-background"></div>
 <div id="popup-content">
   <div id="popup-content-main">
-    Your point is
     <div id="endgame-point"></div>
     <button style="button" id="posttofacebook" onClick="posttofacebook();">POST TO FACEBOOK</button>
   </div>

@@ -49,6 +49,29 @@
   overflow: auto;
 }
 
+#popup-content-main {
+    margin-top: 180px;
+    margin-left: 100px;
+}
+
+#endgame-point
+{
+    color: red;
+    font-family: myScoreFont;
+    font-size: 60px;
+    margin-left: 60px;
+}
+
+#endgame-point button
+{
+    width: 120px;
+    height: 40px;
+    margin-left: 40px;
+    margin-top: 20px;
+    background: url('../img/share_button.png');
+    background-size: 120px 40px;
+}
+
 #startgame-div{
   background: url('../img/welcome-screen-background.png');
   width: 900px;
