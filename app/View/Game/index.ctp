@@ -46,9 +46,12 @@
           if (data === '"true"') {
             sessionStorage.correctguess = parseInt(sessionStorage.correctguess) + 1;
             $("#feedback").html("Congratulation, you're right");
+            var selector = ".user-box#"+(3-input.attr("id"));
+            $(selector).fadeOut("slow",0,function(){});
           }
           else {
             $("#feedback").html("Sorry, you're wrong");
+            input.fadeOut("slow",0,function(){});
           }
           sessionStorage.totalguess = parseInt(sessionStorage.totalguess) + 1;
         }
