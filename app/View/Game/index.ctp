@@ -26,9 +26,10 @@
   </div>
   </div>
 
+<div id="feedback"></div>
 <div id="reset" ><button style="button" onClick="reset();">Reset game</button></div>
 <div id="score">0/0</div>
-<div id="feedback"></div>
+
 <?php
   $seed = rand(1,100000);
   if ($seed % 2 == 0)
