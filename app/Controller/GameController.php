@@ -115,5 +115,9 @@ class GameController extends AppController {
       $this->render('/Game/serialize');
     }
   }
+
+  public function endgame(){
+    
+  }
 }
 ?>

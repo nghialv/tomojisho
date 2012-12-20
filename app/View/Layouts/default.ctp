@@ -7,7 +7,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	<?php echo $this->Html->charset(); ?>
   <?php
     echo $this->Html->script('jquery');
-	  echo $this->Html->script('tomojisho');
+	  echo $this->Html->script('jquery.colorbox-min');
   ?>
   <title>
 		<?php echo $cakeDescription ?>:

@@ -109,6 +109,12 @@
     }
 
     //write point to screen
+    sessionStorage.started = parseInt(sessionStorage.started) + 1;
+    if (parseInt(sessionStorage.started) > 20) {
+      $.colorbox({html:"Your point is".sessionStorage.correctguess."/".sessionStorage.totalguess});
+      clearInterval(interval);
+    }
+
     $("#score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);
   });
 </script>
