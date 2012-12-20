@@ -72,14 +72,17 @@
             else correctans = 2;
           }
         }
+        
+        var selector = ".user-box #"+(3-correctans);    
+        $(selector).fadeOut("fast", 0, function(){
+          //update score
+          sessionStorage.totalguess += 1;
+          $("score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);        
+          window.location.href = "/Game/display";
+        });
       );  
 
-      var selector = ".user-box #"+(3-correctans);    
-      $(selector).fadeOut("fast", 0, function(){
-        //update score
-        $("score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);        
-        window.location.href = "/Game/display";
-      });
+      
   }
 
 
