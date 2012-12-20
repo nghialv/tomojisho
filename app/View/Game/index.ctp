@@ -29,6 +29,8 @@
 <div id="feedback"></div>
 <div id="reset" ><button style="button" onClick="reset();">Reset game</button></div>
 <div id="score">0/0</div>
+<div id="popup-background"></div>
+<div id="popup-content"></div>
 
 <?php
   $seed = rand(1,100000);
@@ -114,8 +116,16 @@
     else {
       sessionStorage.started = parseInt(sessionStorage.started) + 1;
       if (parseInt(sessionStorage.started) > 20) {
-        $.colorbox({html:"Your point is".sessionStorage.correctguess."/".sessionStorage.totalguess});
         clearInterval(interval);
+        
+        $("#popup-background").css({'background-color':'black',
+                                    'top':'0%',
+                                    'left':'0%',
+                                    'z-index':'1001';
+                                    'width':'100%',
+                                    'height':'100%',
+                                    'opacity':'0.4',
+                                    'top':'0%'});
       }
     }
     //write point to screen
