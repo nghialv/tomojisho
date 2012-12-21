@@ -33,6 +33,10 @@
   </div>
   </div>
 
+<div id="loading-status-div" style=" display: none; position: fixed; top: 145px; left: 242px; width: 500px; height: 500px; z-index: 2000;">
+  <img src="../img/loading.gif" style="margin: auto;"/>
+</div>
+
 <div id="feedback"></div>
 <div id="reset" ><button style="button" onClick="reset();"></button></div>
 <div id="score">0/0</div>
@@ -43,9 +47,6 @@
     <button style="button" id="posttofacebook" onClick="posttofacebook();"></button>
     <div id="reset2" ><button style="button" onClick="reset();"></button></div>
   </div>
-</div>
-<div id="loading-status-div">
-  <img src="../img/loading.gif"/>
 </div>
 
 <?php
