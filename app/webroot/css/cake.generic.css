@@ -47,7 +47,7 @@
   z-index:1002;
   overflow: auto;
 }
-
+/*
 #loading-status-div {
   display: none;
   position: fixed;
@@ -61,6 +61,7 @@
 #loading-status-div img{
   margin: auto;
 }
+*/
 
 #popup-content-main {
     margin-top: 180px;
