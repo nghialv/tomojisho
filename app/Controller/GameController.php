@@ -152,7 +152,7 @@ class GameController extends AppController {
                           'order' => array('User.correct DESC')
                          ));  
     $this->set('data', $rankingtable); 
-    $this->render('/Game/ranking')
+    $this->render('/Game/ranking');
   }
 }
 ?>
