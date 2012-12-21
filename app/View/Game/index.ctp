@@ -44,7 +44,7 @@
     <div id="reset2" ><button style="button" onClick="reset();"></button></div>
   </div>
 </div>
-<div id="loading-status">
+<div id="loading-status-div">
   <img src="../img/loading.gif"/>
 </div>
 
@@ -78,7 +78,7 @@
 
           // show loading status
           $("#popup-background").show();
-          $('#loading-status').show();
+          $('#loading-status-div').show();
         }
         $("#score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);
         window.location.href = "/Game/display";
