@@ -16,7 +16,7 @@
         echo 'Q: だれが上の写真をアップロードしましたか?';
   ?>
   </p><br>
-  <div id="ranking" onClick="documment.location.href = '/Game/rankingdisp'"> ランキング</div>
+  <div id="ranking" href='/Game/rankingdisp'> ランキング</div>
   <div id="users-box">
   <div id="1" class="user1-box user-box" onClick="sendata($(this));" href='javascript:void(0);'>
     <?php
@@ -108,7 +108,6 @@
           $(selector).fadeOut("slow", 0, function(){
             //update score
             $("#countdown").fadeOut();
-            sessionStorage.totalguess = parseInt(sessionStorage.totalguess)+1;
             $("#score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);
             window.location.href = "/Game/display";
           });
