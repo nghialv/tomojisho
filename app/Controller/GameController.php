@@ -121,12 +121,17 @@ class GameController extends AppController {
   public function endgame(){
     $correct = $_POST['correct'];
     $total = $_POST['total'];
-
-    $message = "has just got ".$correct."/".$total;
-    $this->FB->postToWall($message);
-
+    
     $me = $this->FB->getCurrentUser();
     $user = $this->User->findAllByUserId($me['id']);
+    
+    if ($correct < $total/2) {
+      $message = $me['name']."さん、".$total."門中".$correct."門正解です。もっと、ゲームを続けて友達のことを理解しましょう！";
+    } else {
+      $message = $me['name']."さん、".$total."門中".$correct."門正解です。おめでとう、合格ですよ、これからも仲良くね！";
+    }     
+    $this->FB->postToWall($message);
+
 
     if (!$user) {
       $this->User->save(array(
