@@ -6,10 +6,10 @@
         foreach ($data as $value) {
           ++$count;
           echo "<div class='ranking-line'>";
-          echo "<div>".$count."</div>";
-          echo "<div><img width='40' height='40' src='".$value['User']['avatar']."'></img></div>";
-          echo "<div>".$value['User']['user_name']."</div>";
-          echo "<div>".$value['User']['correct']."/".$value['User']['total']."</div>";
+          echo "<div style="float:left;">".$count."</div>";
+          echo "<div style="float:left;"><img width='40' height='40' src='".$value['User']['avatar']."'></img></div>";
+          echo "<div style="float:left;">".$value['User']['user_name']."</div>";
+          echo "<div style="float:right;">".$value['User']['correct']."/".$value['User']['total']."</div>";
           echo "</div>";
           echo "<hr>";
         }
