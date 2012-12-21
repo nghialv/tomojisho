@@ -6,21 +6,21 @@
         foreach ($data as $value) {
           ++$count;
           echo "<div class='ranking-line'>";
-          echo "<div>".$count."</div>";
-          echo "<div><img width='40' height='40' src='".$value['User']['avatar']."'></img></div>";
-          echo "<div>".$value['User']['user_name']."</div>";
-          echo "<div>".$value['User']['correct']."/".$value['User']['total']."</div>";
+          echo "<div style='float:left; margin: 10px;'>".$count."</div>";
+          echo "<div style='float:left;'><img width='40' height='40' src='".$value['User']['avatar']."'></img></div>";
+          echo "<div style='float:left; margin: 10px;'>".$value['User']['user_name']."</div>";
+          echo "<div style='float:right; margin: 10px;'>".$value['User']['correct']."/".$value['User']['total']."</div>";
           echo "</div>";
-          echo "<hr>";
+          echo "<hr style='margin-bottom: 2px;'>";
         }
     ?>
   </table>
   </div>
-  <div id="reset" ><button style="button" onClick="redirect();"></button></div>
-
-  <script type="text/javascript">
-  function redirect() { window.location.href = '/Game/welcome';}
-  $(document).ready(function(){
-  });
-  </script>
 </div>
+<div id="reset" style="text-align: center; padding-top: 50px;"><button style="button" onClick="redirect();"></button></div>
+
+<script type="text/javascript">
+  function redirect() { window.location.href = '/Game/welcome';}
+    $(document).ready(function(){
+  });
+</script>

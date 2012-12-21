@@ -65,16 +65,21 @@
 
 #ranking-div{
   width: 800px;
-  height: 550px;
+  height: 450px;
   margin: auto;
   background: url('../img/ranking-page.png');
   background-size: 800px;
   padding-top: 100px;
+  overflow: hidden;
 }
 
 #ranking-table{
-  width: 700px;
+  width: 300px;
   margin: auto;
+}
+
+.ranking-line{
+  height: 50px;
 }
 
 #popup-content-main {
