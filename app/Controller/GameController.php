@@ -5,7 +5,7 @@ App::uses('AppController', 'Controller');
 
 class GameController extends AppController {
   public $uses = array('User');
-  
+
   var $FB=NULL;
   /*
   public function __contruct($resquest=null, $respond=null)
@@ -121,15 +121,15 @@ class GameController extends AppController {
   public function endgame(){
     $correct = $_POST['correct'];
     $total = $_POST['total'];
-    
+
     $me = $this->FB->getCurrentUser();
     $user = $this->User->findAllByUserId($me['id']);
-    
+
     if ($correct < $total/2) {
       $message = $me['name']."さん、".$total."門中".$correct."門正解です。もっと、ゲームを続けて友達のことを理解しましょう！";
     } else {
       $message = $me['name']."さん、".$total."門中".$correct."門正解です。おめでとう、合格ですよ、これからも仲良くね！";
-    }     
+    }
     $this->FB->postToWall($message);
 
 
@@ -151,12 +151,12 @@ class GameController extends AppController {
   }
 
   public function rankingdisp() {
-    $rankingtable = $this->User->find('all', 
+    $rankingtable = $this->User->find('all',
                          array(
-                          'limit' => 15,
+                          'limit' => 8,
                           'order' => array('User.correct DESC')
-                         ));  
-    $this->set('data', $rankingtable); 
+                         ));
+    $this->set('data', $rankingtable);
     $this->render('/Game/ranking');
   }
 }
