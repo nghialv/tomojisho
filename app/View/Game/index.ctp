@@ -107,7 +107,6 @@
           $(selector).fadeOut("slow", 0, function(){
             //update score
             $("#countdown").fadeOut();
-            sessionStorage.totalguess = parseInt(sessionStorage.totalguess)+1;
             $("#score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);
             window.location.href = "/Game/display";
           });
