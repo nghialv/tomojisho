@@ -146,7 +146,7 @@
       sessionStorage.correctguess = 0;
     }
     else {
-      if (parseInt(sessionStorage.total) >= 10) {
+      if (parseInt(sessionStorage.totalguess) > 10) {
         clearInterval(interval);
         $("#endgame-point").html(sessionStorage.correctguess + "/" + sessionStorage.totalguess);
         $("#popup-background").show();
