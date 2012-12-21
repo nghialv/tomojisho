@@ -4,14 +4,14 @@
   <table border="1">
     <?php
       $count = 0;
-      echo "<tr>";
         foreach ($data as $value) {
-          echo ++$count;
+          echo "<tr>";
+          echo "<th><img width='40' height='40' src='".$value['User']['avatar']."'></img></th>";
           echo "<th>".$value['User']['user_name']."</th>";
           echo "<th>".$value['User']['correct']."</th>";
           echo "<th>".$value['User']['total']."</th>";
+          echo "</tr>";
         }
-      echo "</tr>";
     ?>
   </table>
 </body>
