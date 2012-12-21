@@ -121,11 +121,11 @@
   }
 
   function posttofacebook() {
-      window.location.href = "/Game/welcome";
       $.post("/Game/endgame", {correct: sessionStorage.correctguess, total: sessionStorage.totalguess},
         function(data) {
         }
       );
+      window.location.href = "/Game/welcome";
   }
 
   $(document).ready(function() {
