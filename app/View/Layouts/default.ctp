@@ -27,6 +27,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	<div id="container">
     <div id="app-header">
       <img src="../img/logo1.png"/>
+      <a id="ranking" href='/Game/rankingdisp'> ランキング</a>
       <hr>
     </div>
 		<div id="content">

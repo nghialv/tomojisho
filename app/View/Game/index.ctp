@@ -16,21 +16,25 @@
         echo 'Q: だれが上の写真をアップロードしましたか?';
   ?>
   </p><br>
-  <a id="ranking" href='/Game/rankingdisp'> ランキング</a>
   <div id="users-box">
-  <div id="1" class="user1-box user-box" onClick="sendata($(this));" href='javascript:void(0);'>
-    <?php
-      echo '<img src="'.$data["friends"][1]["avatar"].'"/>';
-      echo $data['friends'][1]['name']."</br>";
-    ?>
-  </div>
+  <a href="#feedback">
+    <div id="1" class="user1-box user-box" onClick="sendata($(this));" href='javascript:void(0);'>
+      <?php
+        echo '<img src="'.$data["friends"][1]["avatar"].'"/>';
+        echo $data['friends'][1]['name']."</br>";
+      ?>
+    </div>
+  </a>
   <div id="countdown">100</div>
-  <div id="2" class="user2-box user-box" onClick="sendata($(this));" href='javascript:void(0);'>
-    <?php
-      echo '<img src="'.$data["friends"][2]["avatar"].'"/>';
-      echo $data['friends'][2]['name']."</br>";
-    ?>
-  </div>
+
+  <a href="#feedback">
+    <div id="2" class="user2-box user-box" onClick="sendata($(this));" href='javascript:void(0);'>
+      <?php
+        echo '<img src="'.$data["friends"][2]["avatar"].'"/>';
+        echo $data['friends'][2]['name']."</br>";
+      ?>
+    </div>
+  </a>
   </div>
 
 <div id="loading-status-div" style=" display: none; position: fixed; top: 145px; left: 242px; width: 550px; height: 500px; z-index: 2000;text-align: center">
