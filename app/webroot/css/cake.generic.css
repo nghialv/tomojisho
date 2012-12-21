@@ -48,7 +48,7 @@
   overflow: auto;
 }
 
-#loading-status {
+#loading-status-div {
   display: none;
   position: fixed;
   top: 145px;
@@ -58,7 +58,7 @@
   z-index: 2000;
 }
 
-#loading-status img{
+#loading-status-div img{
   margin: auto;
 }
 
