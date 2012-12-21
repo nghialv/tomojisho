@@ -25,7 +25,7 @@
       ?>
     </div>
   </a>
-  <div id="countdown">100</div>
+  <div id="countdown">15</div>
 
   <a href="#feedback">
     <div id="2" class="user2-box user-box" onClick="sendata($(this));" href='javascript:void(0);'>
@@ -147,7 +147,7 @@
     }
     else {
       sessionStorage.started = parseInt(sessionStorage.started) + 1;
-      if (parseInt(sessionStorage.started)-1 > 3) {
+      if (parseInt(sessionStorage.started)-1 > 10) {
         clearInterval(interval);
         $("#endgame-point").html(sessionStorage.correctguess + "/" + sessionStorage.totalguess);
         $("#popup-background").show();
