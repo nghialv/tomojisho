@@ -44,6 +44,9 @@
     <div id="reset2" ><button style="button" onClick="reset();"></button></div>
   </div>
 </div>
+<div id="loading-status">
+  <img src="../img/loading.gif"/>
+</div>
 
 <?php
   $seed = rand(1,100000);
@@ -145,7 +148,7 @@
         else {
           $("#popup-content").css({'background': 'url(../img/right.png)', 'background-size':'530px 350px'});
         }
-        
+
         $("#popup-content").show();
       }
     }
