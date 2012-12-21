@@ -26,10 +26,11 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <body id="tomojisho-app">
 	<div id="container">
     <div id="app-header">
-      <img src="../img/logo1.png"/>
-      <div id="ranking-link">
-        <img src="../img/ranking-logo.png">
-        <a id="ranking" href='/Game/rankingdisp'> ランキング</a>
+      <div style="float: left;"></div>
+      <img src="../img/logo1.png" style="float: center;"/>
+      <div id="ranking-link" style="float: right; margin-top: 20px; margin-right: 120px;">
+        <img src="../img/ranking-logo.png" style="height: 30px;"/>
+        <a id="ranking" href='/Game/rankingdisp' style="color: orange;"> ランキング</a>
       </div>
       <hr>
     </div>
