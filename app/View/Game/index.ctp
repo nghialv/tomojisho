@@ -33,8 +33,8 @@
   </div>
   </div>
 
-<div id="loading-status-div" style=" display: none; position: fixed; top: 145px; left: 242px; width: 500px; height: 500px; z-index: 2000;text-align: center">
-  <img src="../img/loading.gif" style="margin-left: 127px; height: 200px;"/>
+<div id="loading-status-div" style=" display: none; position: fixed; top: 145px; left: 242px; width: 550px; height: 500px; z-index: 2000;text-align: center">
+  <img src="../img/loading.gif" style="margin-left: 10px; height: 200px;"/>
   <p style="color: white; font-size: 20px;">次の質問のローディング中</p>
 </div>
 
