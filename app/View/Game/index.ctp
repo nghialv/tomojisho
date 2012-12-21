@@ -75,6 +75,10 @@
             $("#countdown").fadeOut();
           }
           sessionStorage.totalguess = parseInt(sessionStorage.totalguess) + 1;
+
+          // show loading status
+          $("#popup-background").show();
+          $('#loading-status').show();
         }
         $("#score").html(sessionStorage.correctguess+"/"+sessionStorage.totalguess);
         window.location.href = "/Game/display";
