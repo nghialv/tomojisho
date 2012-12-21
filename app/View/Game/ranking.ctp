@@ -1,4 +1,5 @@
-<div>
+<div id="ranking-div">
+  <div id="ranking-table">
   <table border="1">
     <?php
       $count = 0;
@@ -14,8 +15,9 @@
         }
     ?>
   </table>
+  </div>
+  <div id="reset" ><button style="button" onClick="redirect();"></button></div>
 
-  <button id="reset" style="button" onClick="redirect();"></button>
   <script type="text/javascript">
   function redirect() { window.location.href = '/Game/welcome';}
   $(document).ready(function(){

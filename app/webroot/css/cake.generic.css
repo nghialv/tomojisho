@@ -63,6 +63,20 @@
 }
 */
 
+#ranking-div{
+  width: 800px;
+  height: 550px;
+  margin: auto;
+  background: url('../img/ranking-page.png');
+  background-size: 800px;
+  padding-top: 100px;
+}
+
+#ranking-table{
+  width: 700px;
+  margin: auto;
+}
+
 #popup-content-main {
     margin-top: 180px;
     margin-left: 100px;
