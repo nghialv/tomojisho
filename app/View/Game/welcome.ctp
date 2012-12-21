@@ -9,16 +9,16 @@
 </div>
 
 <script type="text/javascript">
-  $(document).ready(function(){
-    sessionStorage.started = 1;
-    sessionStorage.totalguess = 0;
-    sessionStorage.correctguess = 0;
-
-    function startGame(){
+  function startGame(){
       // show loading status
       $("#popup-background").show();
       $('#loading-status-div').show();
       window.location.href="/Game/display";
     }
+
+  $(document).ready(function(){
+    sessionStorage.started = 1;
+    sessionStorage.totalguess = 0;
+    sessionStorage.correctguess = 0;
   });
 </script>
