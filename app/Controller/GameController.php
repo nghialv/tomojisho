@@ -126,16 +126,32 @@ class GameController extends AppController {
     $this->FB->postToWall($message);
 
     $me = $this->FB->getCurrentUser();
-
-    $this->User->save(array(
-        'user_id' => $me['id'],
-        'user_name' => $me['name'],
-        'avatar' => $me['avatar'],
-        'correct' => $correct,
-        'total' => $total
-    ));
+    $user = $this->User->findAllByUserId($me['id']);
+    if (!$user) {
+      $this->User->save(array(
+          'user_id' => $me['id'],
+          'user_name' => $me['name'],
+          'avatar' => $me['avatar'],
+          'correct' => $correct,
+          'total' => $total
+      ));
+    } else {
+      $this->$data['User']['correct'] = $user['User']['correct'];
+      $this->$data['User']['total'] = $user['User']['total'];
+      $this->User->save($this->data);
+    }
 
     $this->render('/Game/welcome');
+  }
+
+  public function rankingdisp() {
+    $rankingtable = $this->User->find('all', 
+                         array(
+                          'limit' => 15,
+                          'order' => array('User.correct DESC');  
+                         ));  
+    $this->set('data', $rankingtable); 
+    $this->render('/Game/ranking')
   }
 }
 ?>
