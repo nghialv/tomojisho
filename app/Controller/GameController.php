@@ -127,6 +127,7 @@ class GameController extends AppController {
 
     $me = $this->FB->getCurrentUser();
     $user = $this->User->findAllByUserId($me['id']);
+
     if (!$user) {
       $this->User->save(array(
           'user_id' => $me['id'],
@@ -148,7 +149,7 @@ class GameController extends AppController {
     $rankingtable = $this->User->find('all', 
                          array(
                           'limit' => 15,
-                          'order' => array('User.correct DESC');  
+                          'order' => array('User.correct DESC')
                          ));  
     $this->set('data', $rankingtable); 
     $this->render('/Game/ranking')
