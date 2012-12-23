@@ -107,7 +107,13 @@
 
     function postToWall($message)
     {
-      $this->facebook->api("/me/feed", "post", array('message' => $message));
+      $message_body = array(
+        'message' => $message,
+        'link' => 'http://crataj1-amo-app000.c4sa.net',
+        'picture' => 'http://crataj1-amo-app000.c4sa.net/img/icon.png',
+       );
+
+      $this->facebook->api("/me/feed", "post", $message_body);
     }
   }
 ?>
