@@ -14,7 +14,7 @@ Demo
 ![status question](https://raw.github.com/nghialv2607/tomojisho/master/readmeData/status.png)
 
 #### Photo question
-![photo question](https://raw.github.com/nghialv2607/tomojisho/master/readmeData/phots.png)
+![photo question](https://raw.github.com/nghialv2607/tomojisho/master/readmeData/photo.png)
 
 #### The End
 ![the end](https://raw.github.com/nghialv2607/tomojisho/master/readmeData/result.png)
