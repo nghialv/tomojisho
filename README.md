@@ -1,6 +1,9 @@
 Tomojisho
 =======
 
+a facebook game which looks like a dictionary for your friends
+through this game, you can review the information of your friends
+
 Demo
 ----------------
 ### App link
